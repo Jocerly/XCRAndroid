@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:background="@drawable/text_menu_bg"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_centerVertical="true"
+                    android:text="选择商品" />
+
+                <TextView
+                    android:id="@+id/GoodName"
+                    style="@style/text_nomal_style2"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/pad60"
+                    android:text="请选择" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="商品原价(元)" />
+
+                <TextView
+                    android:id="@+id/oldPrice"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="false" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="优惠方式" />
+
+            <View style="@style/line_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbSpecialPrice"
+                        style="@style/chenckbox_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad50"
+                        android:checked="true"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:text="特价" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <View
+                            style="@style/line_style"
+                            android:layout_marginLeft="@dimen/pad15"></View>
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/rbDiscount"
+                        style="@style/chenckbox_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad50"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:text="折扣" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    android:id="@+id/textType"
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="特价金额" />
+
+                <EditText
+                    android:id="@+id/textTypeValue"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:gravity="center_vertical|right"
+                    android:hint="输入特价金额"
+                    android:inputType="numberDecimal"
+                    android:singleLine="false" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="每笔订单超过限购数量的部分按原价购买" />
+
+            <View style="@style/line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="每单限购数量" />
+
+                <EditText
+                    android:id="@+id/textRestrictionsNO"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:gravity="center_vertical|right"
+                    android:hint="输入限购数量"
+                    android:inputType="number"
+                    android:digits="0,1,2,3,4,5,6,7,8,9"
+                    android:singleLine="false" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="超过活动库存后商品不在享有折扣价格" />
+
+            <View style="@style/line_style" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="活动库存" />
+
+                <EditText
+                    android:id="@+id/textStock"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:gravity="center_vertical|right"
+                    android:hint="输入活动库存"
+                    android:inputType="number"
+                    android:digits="0,1,2,3,4,5,6,7,8,9"
+                    android:singleLine="false" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btnSave"
+                style="@style/btnCirlceRedStyle"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/pad15"
+                android:text="确定" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

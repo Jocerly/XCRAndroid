@@ -1,0 +1,66 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ActionBar2="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="10"
+        android:title="@string/action_about"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="20"
+        android:title="@string/action_search"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_fav"
+        android:orderInCategory="30"
+        android:title="@string/action_favrate"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="40"
+        android:title="@string/action_setting"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_submit"
+        android:orderInCategory="50"
+        android:title="@string/action_submit"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="60"
+        android:title="@string/action_share"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="70"
+        android:title="@string/action_add"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="80"
+        android:title="@string/action_edit"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_mendian"
+        android:orderInCategory="90"
+        android:title="门店收入"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_waisong"
+        android:orderInCategory="100"
+        android:title="外送收入"
+        android:visible="false"
+        ActionBar2:showAsAction="ifRoom" />
+
+
+</menu>

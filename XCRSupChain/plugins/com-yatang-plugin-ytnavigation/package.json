@@ -1,0 +1,14 @@
+{
+  "name": "com-yatang-plugin-ytnavigation",
+  "version": "1.0.0",
+  "description": "navigation plugin for cordova",
+  "main": "ytnavigation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "navigation"
+  ],
+  "author": "lixiang",
+  "license": "ISC"
+}

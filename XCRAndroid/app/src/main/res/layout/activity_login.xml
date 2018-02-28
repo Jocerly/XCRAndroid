@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/pad25"
+            android:paddingRight="@dimen/pad25"
+            android:paddingTop="@dimen/pad70">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pad20"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pad20"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/text_medium_style2"
+                    android:text="雅堂小超商家版"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editUserName"
+                        style="@style/edit_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad52"
+                        android:background="@drawable/edit_up_layout_bg"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="@dimen/pad10"
+                        android:hint="加盟商帐号"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15" />
+
+                    <ImageView
+                        android:id="@+id/imageClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:padding="15dp"
+                        android:src="@drawable/clear" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editPwd"
+                        style="@style/edit_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad52"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_down_layout_bg"
+                        android:drawableLeft="@drawable/pwd"
+                        android:drawablePadding="@dimen/pad10"
+                        android:hint="密码"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="21"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15" />
+
+                    <ImageView
+                        android:id="@+id/imagePwdClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="@dimen/pad42"
+                        android:src="@drawable/clear" />
+
+                    <ImageView
+                        android:id="@+id/imagePwdShown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:padding="@dimen/pad15"
+                        android:src="@drawable/pwd_no" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/butLogin"
+                    style="@style/btnCirlceRedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/pad5"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:layout_marginTop="@dimen/pad20"
+                    android:text="登录" />
+
+                <TextView
+                    android:id="@+id/textForgetPwd"
+                    style="@style/text_nomal_style2"
+                    android:layout_marginTop="@dimen/pad20"
+                    android:text="忘记密码？" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login_debug_ipconfig"
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@android:drawable/ic_menu_preferences"
+                android:gravity="center"
+                android:text="设置" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textSign"
+            style="@style/btnLineCirlceRedStyle"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/pad25"
+            android:text="新加盟签约入驻" />
+
+    </LinearLayout>
+</ScrollView>
+
+

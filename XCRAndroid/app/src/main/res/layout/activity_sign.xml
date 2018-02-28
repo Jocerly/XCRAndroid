@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/title_bar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad180"
+            android:background="@color/green_press">
+
+        </View>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/pad60">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pad10"
+                android:layout_marginRight="@dimen/pad10"
+                android:background="@drawable/sign_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="@dimen/pad5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2017年"
+                        android:textColor="@color/green_press"
+                        android:textSize="@dimen/pad20" />
+
+                    <TextView
+                        android:id="@+id/textMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7月"
+                        android:textColor="@color/green_press"
+                        android:textSize="@dimen/pad20" />
+                </LinearLayout>
+
+                <com.yatang.xc.xcr.views.SignView
+                    android:id="@+id/signView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pad15"
+                    android:layout_marginRight="@dimen/pad15" />
+
+                <View
+                    style="@style/line_style"
+                    android:alpha="150"
+                    android:layout_marginLeft="@dimen/pad20"
+                    android:layout_marginRight="@dimen/pad20" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/pad10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="你已连续签到"
+                        android:textColor="@color/green_press"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/textContinueSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:text="--"
+                        android:textColor="@color/orange_press"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textColor="@color/green_press"
+                        android:textSize="19dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计获得奖励"
+                        android:textColor="@color/green_press"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/textSignReward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:text="--"
+                        android:textColor="@color/orange_press"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/textRewardUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green_press"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad30"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/btnSign"
+                    android:layout_width="@dimen/pad200"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/sign"
+                    android:gravity="center"
+                    android:text="每日签到"
+                    android:textColor="@color/white_light"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_marginTop="@dimen/pad30"
+                android:paddingLeft="@dimen/pad15"
+                android:text="签到说明：" />
+
+            <TextView
+                android:id="@+id/textSignMsg"
+                style="@style/text_small_style_gray"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:paddingTop="@dimen/pad10"
+                android:paddingBottom="@dimen/pad10"
+                android:text="--" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

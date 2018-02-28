@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad180"
+                android:background="@drawable/viptopback">
+                <!--<TextView-->
+                <!--android:id="@+id/textIntegralvalidity"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginBottom="@dimen/pad18"-->
+                <!--android:text="积分有效期为12个月(包含当月)"-->
+                <!--android:textColor="#D4D5D6"-->
+                <!--android:textSize="@dimen/pad12"-->
+                <!--android:visibility="gone" />-->
+
+                <TextView
+                    android:id="@+id/PreNextGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/pad25"
+                    android:background="@drawable/integral_grayback"
+                    android:paddingBottom="@dimen/pad3"
+                    android:paddingLeft="@dimen/pad5"
+                    android:paddingRight="@dimen/pad5"
+                    android:paddingTop="@dimen/pad3"
+                    android:text="--"
+                    android:textColor="#D4D5D6"
+                    android:textSize="@dimen/pad12" />
+
+                <LinearLayout
+                    android:id="@+id/linValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/PreNextGrade"
+                    android:layout_marginBottom="@dimen/pad20"
+                    android:layout_marginLeft="@dimen/pad20"
+                    android:layout_marginRight="@dimen/pad20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textThisMonthIntegral"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/vip_yellow"
+                        android:textSize="@dimen/pad33" />
+
+                    <TextView
+                        android:id="@+id/textActNextMonthGrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/vip_yellow"
+                        android:textSize="@dimen/pad33" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id='@+id/lineIntegralTip'
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/linValue"
+                    android:layout_marginBottom="@dimen/pad20"
+                    android:layout_marginLeft="@dimen/pad20"
+                    android:layout_marginRight="@dimen/pad20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="本月获得积分"
+                        android:textColor="#A5A6AA"
+                        android:textSize="@dimen/pad14" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="预计下月可获得"
+                        android:textColor="#A5A6AA"
+                        android:textSize="@dimen/pad14" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <LinearLayout
+                android:id="@+id/linIntegral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/base_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_nomal_style2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/pad5"
+                    android:paddingLeft="@dimen/pad15"
+                    android:paddingTop="@dimen/pad15"
+                    android:text="积分记录(仅显示近12个月)" />
+
+                <View style="@style/line_style" />
+
+                <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                    android:id="@+id/recyclerViewIntegral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <View style="@style/line_style" />
+
+                <TextView
+                    style="@style/text_nomal_style2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/pad5"
+                    android:paddingLeft="@dimen/pad15"
+                    android:text="最多查看最近12个月的积分记录"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

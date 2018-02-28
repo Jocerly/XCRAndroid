@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">雅堂小超商家版</string>
+    <string name="no_connection_net">网络连接异常</string>
+    <string name="no_back_data">数据丢失，请退出从新登录</string>
+    <string name="login">登录</string>
+    <string name="login_out">退出登录</string>
+    <string name="out">退出应用</string>
+    <string name="back">返回</string>
+    <string name="close">关闭</string>
+    <string name="ok">确定</string>
+    <string name="ok1">确认</string>
+    <string name="next">下一步</string>
+    <string name="cancle">取消</string>
+    <string name="exit_toast">再按一次退出程序</string>
+    <string name="has_no_num">-- --</string>
+    <string name="account_overdue">帐号过期请重新登录</string>
+    <string name="no_data">没有更多数据了o(╯□╰)o</string>
+    <string name="doreLogin">重新登录</string>
+    <string name="doExit">退出</string>
+    <!-- 时间控件 -->
+    <string-array name="weeks">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </string-array>
+
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="select_date">选择日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="select_week">选择星期</string>
+
+    <string name="vip_center">会员中心</string>
+    <string name="store_msg">门店管理</string>
+    <string name="change_store">切换门店</string>
+    <string name="about_yt_super">关于雅堂小超</string>
+    <string name="update">版本更新</string>
+    <string name="call">400-0800-333</string>
+    <string name="scan_allcode_hint">将二维码或条形码对入取景框，即可自动扫描</string>
+    <string name="accout_out">帐号过期，请重新登录</string>
+
+    <string name="store_manage">门店管理</string>
+    <string name="choose_store">选择门店</string>
+    <string name="revenue">门店收入</string>
+    <string name="transaction">交易流水</string>
+    <string name="settlement_manage">结算管理</string>
+    <string name="detial">明细</string>
+    <string name="msg">消息</string>
+    <string name="for_payment">批量结款</string>
+    <string name="my_task">我的任务</string>
+    <string name="purchase">我要进货</string>
+    <string name="scan_code">扫码调价</string>
+    <string name="add_goods">新增商品</string>
+    <string name="goods_list">门店商品</string>
+    <string name="stock_list">库存管理</string>
+    <string name="classes">小超课堂</string>
+    <string name="ordermanage">外送订单</string>
+    <string name="take_out">外卖收入</string>
+    <string name="take_out_goods_list">外卖收入</string>
+    <string name="statistics">数据统计</string>
+
+    <!-- 购买收银机 -->
+    <string name="order_number">雅堂电商订单号</string>
+    <string name="btn_commit">提交</string>
+    <string name="title_buy_pos">购买收银机</string>
+    <string name="toast_input_order_number">请输入雅堂电商订单号！</string>
+    <string name="toast_commit_success">提交成功！</string>
+    <string name="exit_dialog_title">还未提交，确认关闭吗？</string>
+    <string name="txt_get_order_number">获取订单号方式：</string>
+    <string name="text_tip">提示</string>
+
+    <!--学习任倒计时-->
+    <string name="txt_left_times_hour">还剩%1$d小时%2$d分钟%3$d秒完成学习</string>
+    <string name="txt_left_times">还剩%1$d分钟%2$d秒完成学习</string>
+    <string name="txt_left_time">还剩%1$d秒完成学习</string>
+    <string name="txt_please_finish_study">请先完成学习！</string>
+    <string name="btn_finish_study">确认完成学习</string>
+
+    <!--任务提交完成-->
+    <string name="txt_task_finished">恭喜，您很顺利地完成了任务！</string>
+    <string name="txt_wait_verify">提交成功，请耐心等待审核！</string>
+    <string name="btn_backto_taskcenter">返回任务中心</string>
+    <string name="txt_title_finished">恭喜完成</string>
+
+    <string name="about_xiaochao_desc">\t\t\t\t雅堂小超是雅堂控股集团旗下互联网社区超市连锁品牌，以互联网+电商+社区+小超市+物流+供应链金融的运营模式，通过迅速整合国内社区超市进行品牌升级，建立线上线下渠道，并依托雅堂电商平台商超版块，提供大数据技术支持、物流到家服务和供应链金融服务（即雅堂金融），为加盟商实现线上线下销售双重利润的合作共赢商业模式。\n\n\t\t\t雅堂控股集团成立于2012年6月，是一家以深耕产业链为核心的专业投资管理机构，是中国“互联网+”模式的实践者和引领者。 作为四川省重点引进项目，雅堂控股集团已与成都天府新区签订企业总部和电商平台开发项目投资合作协议，雅堂控股将在天府新区建立包含业务运营、系统研发、产业融合、供应链金融、家具物流、互联网支付等多元业务的总部基地，并搭建连接西南地区电商经济发展的重要枢纽。</string>
+    <string name="xiaochao_fullname">四川雅堂小超超市股份有限公司</string>
+
+    <string name="add_to_stock_dialog">成本价(元)：%1$s\n\n入库数量：%2$s\n\n入库后不可更改，确定入库吗？</string>
+    <string name="txt_settlement_msg">请务必确认结算单，否则无法及时进行资金结算</string>
+    <string name="txt_settlement">此处为线上订单款项的结算。每天一条结算单，第二天生成前一天的结算单。\n订单T+1结算：结算单需加盟商进行确认之后才会进行结算。\n优惠券T+7结算：正常销售时，优惠券结算金额仅为平台分摊部分的金额；发生退货时，平台承担的优惠券金额需退还给平台。优惠券退款金额等于券金额*退货商品占订单商品总金额的比例*平台分摊比例。\n资金由雅堂结算至加盟商本人的雅堂金融账户中。当出现结算失败时，可联系平台客服反馈，待平台查明原因后解决。</string>
+
+    <!--支付-->
+    <string name="txt_payresult_checking">%1$d  秒支付结果效验中...</string>
+    <string name="txt_pay_success">支付成功，3秒后自动跳转...</string>
+
+    <!-- ActionBar按钮 -->
+    <string name="action_about">提交</string>
+    <string name="action_search">搜索</string>
+    <string name="action_setting">设置</string>
+    <string name="action_favrate">收藏</string>
+    <string name="action_share">分享</string>
+    <string name="action_submit">保存</string>
+    <string name="action_add">+ 添加</string>
+    <string name="action_edit">编辑</string>
+    <!-- ActionBar按钮 结束-->
+    <string name="x5_toast">X5内核更新中，请稍候</string>
+
+    <string-array name="setting_host_entries">
+        <item>sit环境</item>
+        <item>uat环境</item>
+        <item>测试生产环境</item>
+    </string-array>
+
+    <string-array name="setting_sup_entries">
+        <item>默认</item>
+        <item>手动</item>
+    </string-array>
+
+    <string-array name="setting_sup_entries_value">
+        <item>default</item>
+        <item>manual</item>
+    </string-array>
+
+    <string-array name="setting_host_entries_value">
+        <!--sit-->
+        <item>dev</item>
+        <!--uat-->
+        <item>test</item>
+        <!--生产-->
+        <item>produce</item>
+    </string-array>
+    <string-array name="IntegralName">
+        <item>每日签到</item>
+        <item>学习小超课堂</item>
+        <item>POS当面收付款</item>
+        <item>采购商品</item>
+        <item>缴纳保证金</item>
+    </string-array>
+
+    <string-array name="IntegralInfo">
+        <item>坚持打卡，天天领积分</item>
+        <item>优质课程教你如何更好的经营店铺</item>
+        <item>收银使用微信，支付宝等移动支付</item>
+        <item>海量优质，实惠商品轻松采购，配送到店</item>
+        <item>缴纳加盟保证金，赠送积分和惊喜特权</item>
+    </string-array>
+    <string name="default_setting_host_entries_value">dev</string>
+
+    <string name="delivery_type1">公里数决定配送的半径，即店铺的配送范围是方圆几公里。</string>
+    <string name="delivery_type2">第三方配送，配送信息不可修改。</string>
+    <string name="title_activity_settlement_coupon_detial">SettlementCouponDetialActivity</string>
+
+    <string name="bond_time_out">因未及时完成合同签订或支付保证金，已视为放弃加盟，若需再次加盟，请联系拓展员重新申请</string>
+    <string name="has_not_realname">您的金融账户未实名认证，不能进行加盟签约入驻。请在雅堂金额App或官方网站登录进行实名认证！</string>
+    <string name="bond_value">确认选择交纳%1$s元加盟保证金吗？确认后不可变更</string>
+    <string name="pay_bond_msg">请务必在10天之内支付保证金，否则视为放弃加盟。若需再次了解合同详细内容，请点击查看加盟合同</string>
+    <string name="identy_msg">注意事项：\n
+        1.您的金融账户是否已实名认证，若未实名认证，请在雅堂金融App或官方网站登录进行实名认证，否则不能签约入驻；\n
+        2.若您已通过加盟评分表，请务必在10个工作日之内签订合同，否则视为放弃加盟；\n
+        3.若您已完成合同签订，请务必在10个自然日之内支付保证金，否则视为放弃加盟（仅针对需交纳保证金的商家）；\n
+        4.已加盟的商家无须再签约入驻。</string>
+</resources>

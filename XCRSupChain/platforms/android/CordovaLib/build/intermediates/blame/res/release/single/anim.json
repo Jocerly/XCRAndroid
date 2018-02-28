@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\ASAppa\\trunk\\XCRSupChain\\platforms\\android\\CordovaLib\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Jocer\\.android\\build-cache\\993038b777d5de99aaf0f7d878480ee92e3a8527\\output\\res\\anim\\abc_fade_out.xml"
+    }
+]

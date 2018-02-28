@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_menu_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/pad15">
+
+    <ImageView
+        android:id="@+id/imageGoodsPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/task_other" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/pad10">
+
+        <TextView
+            android:id="@+id/textGoodsName"
+            style="@style/text_nomal_style"
+            android:singleLine="true"
+            android:text="--" />
+
+        <TextView
+            android:id="@+id/textGoodsCode"
+            style="@style/text_nomal_style2"
+            android:layout_marginTop="@dimen/pad5"
+            android:text="--" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        
+        <TextView
+            android:id="@+id/textGoodsPrice"
+            style="@style/text_nomal_style2"
+            android:layout_centerInParent="true"
+            android:text="--"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textUnitName"
+            android:layout_marginLeft="@dimen/pad3"
+            style="@style/text_nomal_style2"
+            android:layout_marginRight="@dimen/pad8"
+            android:gravity="center|right"
+            android:text="--" />
+
+        <ImageView
+            android:id="@+id/imageNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

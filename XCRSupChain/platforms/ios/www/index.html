@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Hello Corvdova</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova_plugins.js"></script>
+            <script type="text/javascript" charset="utf-8">
+                function jumpToPage1() {
+                    var options = {
+                        paramsCallBack: function(callbackId, data) {
+                            alert(data);
+                        }
+                    };
+                    window.YTNavigation.redirect("FirstPage.html", options);
+                }
+            
+            function successFunction() {}
+            
+            function failFunction() {}
+            
+            function deepRedirect() {
+                window.Navigation.deepLinkRedirect("hybrid://119/detail.html");
+            }
+            
+            var onGeoSuccess = function(position) {
+                alert('Latitude: ' + position.coords.latitude + '\n' +
+                      'Longitude: ' + position.coords.longitude + '\n' +
+                      'Altitude: ' + position.coords.altitude + '\n' +
+                      'Accuracy: ' + position.coords.accuracy + '\n' +
+                      'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+                      'Heading: ' + position.coords.heading + '\n' +
+                      'Speed: ' + position.coords.speed + '\n' +
+                      'Timestamp: ' + position.timestamp + '\n');
+            };
+            
+            var onGeoError = function(error) {
+                alert('code: ' + error.code + '\n' +
+                      'message: ' + error.message + '\n');
+            };
+            
+            function geo() {
+                navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+            };
+            
+            function setOptions(srcType) {
+                var options = {
+                    // Some common settings are 20, 50, and 100
+                    quality: 50,
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    // In this app, dynamically set the picture source, Camera or photo gallery
+                    sourceType: srcType,
+                    encodingType: Camera.EncodingType.JPEG,
+                    mediaType: Camera.MediaType.PICTURE,
+                    allowEdit: true,
+                    correctOrientation: true //Corrects Android orientation quirks
+                }
+                return options;
+            };
+            
+            function openFilePicker(selection) {
+                
+                var srcType = Camera.PictureSourceType.SAVEDPHOTOALBUM;
+                var options = setOptions(srcType);
+                
+                if (selection == "picker-thmb") {
+                    // To downscale a selected image,
+                    // Camera.EncodingType (e.g., JPEG) must match the selected image type.
+                    options.targetHeight = 100;
+                    options.targetWidth = 100;
+                }
+                
+                navigator.camera.getPicture(function cameraSuccess(imageData) {
+                                            var image = document.getElementById('myImage');
+                                            image.src = "data:image/jpeg;base64," + imageData;
+                                            }, function cameraError(error) {
+                                            console.debug("Unable to obtain picture: " + error, "app");
+                                            }, options);
+            };
+            
+            function openCamera(selection) {
+                var srcType = Camera.PictureSourceType.CAMERA;
+                var options = setOptions(srcType);
+                navigator.camera.getPicture(function cameraSuccess(imageUri) {
+                                            var image = document.getElementById('myImage');
+                                            image.src = "data:image/jpeg;base64," + imageData;
+                                            }, function cameraError(error) {
+                                            console.debug("Unable to obtain picture: " + error, "app");
+                                            }, options);
+            };
+            
+            function alipay(payInfo) {
+                window.YTPay.alipay(payInfo, function success(){
+                                    alert('支付成功');
+                                    }, function fail(){
+                                    alert('支付失败');
+                                    });
+            };
+            function wxpay(preOrderId) {
+                window.YTPay.wxpay(preOrderId, function success(){
+                                   alert('支付成功');
+                                   }, function fail(){
+                                   alert('支付失败');
+                                   });
+            }
+            </script>
+            </head>
+    
+    <body style="padding-top:50px">
+        <button style="font-size:23px;" onclick="jumpToPage1();">Jump to Page One</button>
+        <br>
+        <button style="font-size:23px;" onclick="deepRedirect();">跳转到其他模块的界面</button>
+        <br>
+        <button style="font-size:23px;" onclick="geo();">定位</button>
+        <br>
+        <button style="font-size:23px;" onclick="openFilePicker('aa');">选取照片</button>
+        <br>
+        <button style="font-size:23px;" onclick="wxpay('11111111');">微信支付</button>
+        <br>
+        <button style="font-size:23px;" onclick="alipay('alipay_sdk=alipay-sdk-java-dynamicVersionNo&app_id=2016061701527675&biz_content=%7B%22body%22%3A%22%E6%96%B0%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%22%2C%22out_trade_no%22%3A%22uat-27620077_20170724162157%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22subject%22%3A%22%E9%9B%85%E5%A0%82-%E6%96%B0%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%22%2C%22timeout_express%22%3A%222h%22%2C%22total_amount%22%3A%220.01%22%7D&charset=utf-8&format=json&method=alipay.trade.app.pay&notify_url=http%3A%2F%2F118.112.177.36%3A17203%2Fpayment%2FappAlipay%2FappAlipayAsynNotify.jsp&sign=LED3AW2n%2BNlA30Xi%2BiAFxt9zAuSMNdm5LX9VVj%2BN8WpFhoeGbbTj9zw2sHsbiiIKdLWL3qo%2BfgHNA%2BN%2FfhAGOdxR%2B0bEDtJwbtSIZv76pd%2BN%2BLFrc6W%2BmWTRn2RgW9OVn0iYPQNNSZepJABHNJWkNpQuEaYteUbAIC7nXJE4c05DeELVldOXi2F2DJIhuC5o8Llze2oM8ZA0JeQMeCn2jEWmJjuOWQvKHtWxHhRoR0Fl55iUBbcUY%2BPkFgzXe7rEP0e%2F9GheUb9M2l5k4k18GoYADDNDTEYpYoDdpCQ%2B8EnByi6%2BweSyGwpUFBlKO7mbIehYL6mtZQbCVHAPtIN4tg%3D%3D&sign_type=RSA2&timestamp=2017-07-24+16%3A21%3A57&version=1.0');">支付宝支付</button>
+        <br>
+        <img id="myImage" src="">
+            </body>
+    
+</html>

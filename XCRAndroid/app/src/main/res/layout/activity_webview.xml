@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad3"
+        android:progressDrawable="@drawable/progress_bg"
+        android:max="100"
+        android:progress="0" />
+
+    <RelativeLayout
+        android:id="@+id/web_filechooser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:paddingTop="@dimen/pad80"
+            android:id="@+id/textNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/pad20"
+            android:drawableTop="@drawable/no_data"
+            android:text="@string/no_data"
+            />
+
+        <LinearLayout
+            android:id="@+id/mLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_Finish"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_Finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View style="@style/line_style"></View>
+
+            <TextView
+                android:id="@+id/btnFinish"
+                style="@style/btnCirlceRedStyle"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/pad15" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

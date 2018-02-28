@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad140"
+                android:background="@color/blue_task"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textCashAward"
+                    style="@style/text_large_style"
+                    android:text="--"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:id="@+id/textAwardUnit"
+                    android:layout_below="@+id/textCashAward"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/pad10"
+                    android:text="奖励(元)"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad42"
+                android:layout_margin="@dimen/pad15"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbDaily"
+                    style="@style/radio_nomal_style"
+                    android:layout_weight="1"
+                    android:background="@drawable/task_left_bg"
+                    android:checked="true"
+                    android:text="日常任务" />
+
+                <RadioButton
+                    android:id="@+id/rbRecommended"
+                    style="@style/radio_nomal_style"
+                    android:layout_weight="1"
+                    android:background="@drawable/task_center_bg"
+                    android:text="推荐任务" />
+
+                <RadioButton
+                    android:id="@+id/rbLearning"
+                    style="@style/radio_nomal_style"
+                    android:layout_weight="1"
+                    android:background="@drawable/task_right_bg"
+                    android:text="学习任务" />
+            </RadioGroup>
+
+            <View style="@style/line_style"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_gravity="bottom"></View>
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/pad20"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

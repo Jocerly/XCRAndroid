@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <org.jocerly.jcannotation.widget.recyclevew.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/pad10"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llTicket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ticket_change_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad80"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textTicketAccount"
+                        style="@style/text_ticket_large_style"
+                        android:paddingTop="@dimen/pad10"
+                        android:text="--"
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/text_ticket_style"
+                        android:layout_below="@+id/textCashAward"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/pad3"
+                        android:text="小票金额"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad10"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/pad10"
+                    android:paddingLeft="@dimen/pad5"
+                    android:paddingRight="@dimen/pad5"
+                    android:paddingTop="@dimen/pad10">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="2"
+                        android:text="商品"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_ticket_style"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="数量"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/text_ticket_style"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="单价"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/text_ticket_style"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="金额"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <org.jocerly.jcannotation.widget.listView.CustomerListView
+                    android:id="@+id/customerListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="@dimen/pad1_px"
+                    android:divider="@color/line">
+
+                </org.jocerly.jcannotation.widget.listView.CustomerListView>
+
+                <ImageView style="@style/line_ticket_style"></ImageView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="商品总金额" />
+
+                    <TextView
+                        android:id="@+id/textGoodAllValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="应收金额" />
+
+                    <TextView
+                        android:id="@+id/textReceivableValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="实收金额" />
+
+                    <TextView
+                        android:id="@+id/textPaidUpValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="找零" />
+
+                    <TextView
+                        android:id="@+id/textChangeValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <ImageView style="@style/line_ticket_style"></ImageView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewPayType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <ImageView style="@style/line_ticket_style"></ImageView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="雅堂分摊金额" />
+
+                    <TextView
+                        android:id="@+id/textYatangAssessedValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="商家分摊金额" />
+
+                    <TextView
+                        android:id="@+id/textBusinessAssessedValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="总折扣额" />
+
+                    <TextView
+                        android:id="@+id/textAllDiscountValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="总折让额" />
+
+                    <TextView
+                        android:id="@+id/textAllReducteValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="收银损益" />
+
+                    <TextView
+                        android:id="@+id/textProfitLossValue"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <ImageView style="@style/line_ticket_style"></ImageView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="小票号" />
+
+                    <TextView
+                        android:id="@+id/textTicketNo"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="交易时间" />
+
+                    <TextView
+                        android:id="@+id/textTime"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="收银机号" />
+
+                    <TextView
+                        android:id="@+id/textCashegisterNo"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="收银员工号" />
+
+                    <TextView
+                        android:id="@+id/textCashierStaffNo"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad35"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_ticket_style"
+                        android:text="门店编号" />
+
+                    <TextView
+                        android:id="@+id/textStoreSerialNo"
+                        style="@style/text_ticket_style"
+                        android:layout_alignParentRight="true"
+                        android:text="--" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iamgePostingSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/posting_no" />
+
+
+        </FrameLayout>
+    </org.jocerly.jcannotation.widget.recyclevew.MyScrollview>
+</LinearLayout>

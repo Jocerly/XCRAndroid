@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-yatang-plugin-ytnavigation" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>YTNavigation</name>
+    <js-module name="YTNavigation" src="www/ytnavigation.js">
+        <clobbers target="YTNavigation" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="YTNavigation" >
+                <param name="android-package" value="com.yatang.plugin.navigation.APager"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="src/android/APager.java" target-dir="src/com/yatang/plugin/navigation/" />
+        <source-file src="src/android/CordovaPageActivity.java" target-dir="src/com/yatang/plugin/navigation/" />
+        <source-file src="src/android/CordovaPage.java" target-dir="src/com/yatang/plugin/navigation/" />
+        <source-file src="src/android/Navigator.java" target-dir="src/com/yatang/plugin/navigation/" />
+    </platform> 
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="YTNavigation">
+                <param name="ios-package" value="CDVNavigation"/>
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/CDVNavigation.h" />
+        <source-file src="src/ios/CDVNavigation.m" />
+        <header-file src="src/ios/CDVSubViewController.h" />
+        <source-file src="src/ios/CDVSubViewController.m" />
+        <framework src="UIKit.framework" />
+    </platform>
+</plugin>

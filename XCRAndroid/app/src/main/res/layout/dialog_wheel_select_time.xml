@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/pad20"
+    android:layout_marginRight="@dimen/pad20"
+    android:background="@drawable/dialog_white_bg"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textTitle"
+        style="@style/text_medium_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad45"
+        android:gravity="center"
+        android:text="选择时间" />
+
+    <LinearLayout
+        android:id="@+id/select_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+
+            <com.yatang.xc.xcr.views.WheelView
+                android:id="@+id/select_time_wheel_left"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/pad50"
+                android:paddingTop="@dimen/pad5"
+                android:text="@string/hour"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/font3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+
+            <com.yatang.xc.xcr.views.WheelView
+                android:id="@+id/select_time_wheel_right"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/pad50"
+                android:paddingTop="@dimen/pad5"
+                android:text="@string/minute"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/font3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_below="@id/select_time_layout"></View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/select_date_cancel"
+            style="@style/dialog_left_btn_style" />
+
+        <View style="@style/dialog_cutting_line_style" />
+
+        <Button
+            android:id="@+id/select_date_sure"
+            style="@style/dialog_right_btn_style" />
+    </LinearLayout>
+
+</RelativeLayout>

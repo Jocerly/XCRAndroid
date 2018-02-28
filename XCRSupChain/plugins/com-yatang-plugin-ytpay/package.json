@@ -1,0 +1,14 @@
+{
+  "name": "com-yatang-plugin-ytpay",
+  "version": "1.0.0",
+  "description": "pay plugin for cordova",
+  "main": "ytpay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ytpay"
+  ],
+  "author": "lixiang",
+  "license": "ISC"
+}

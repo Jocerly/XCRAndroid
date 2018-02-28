@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-yatang-plugin-ytlogicservice" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>YTLogicService</name>
+    <js-module name="YTLogicService" src="www/ytlogicservice.js">
+        <clobbers target="YTLogicService" />
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="YTLogicService">
+        <param name="ios-package" value="CDVLogicService"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/CDVLogicService.h"/>
+    <source-file src="src/ios/CDVLogicService.m"/>
+  </platform>
+  <!-- android -->
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="YTLogicService">
+        <param name="android-package" value="com.yatang.plugin.ytlogicservice.YTLogicService"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/YTLogicService.java" target-dir="src/com/yatang/plugin/ytlogicservice"/>
+  </platform>
+</plugin>

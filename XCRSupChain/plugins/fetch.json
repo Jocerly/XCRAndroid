@@ -1,0 +1,66 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat@^1.1.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com-yatang-plugin-ytlogicservice": {
+        "source": {
+            "type": "local",
+            "path": "D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytlogicservice"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com-yatang-plugin-ytnavigation": {
+        "source": {
+            "type": "local",
+            "path": "D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytnavigation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com-yatang-plugin-ytnetwork": {
+        "source": {
+            "type": "local",
+            "path": "D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytnetwork"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com-yatang-plugin-ytnotification": {
+        "source": {
+            "type": "local",
+            "path": "D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytnotification"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com-yatang-plugin-ytpay": {
+        "source": {
+            "type": "local",
+            "path": "D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytpay"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "x5webview-cordova-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/runner525/x5webview-cordova-plugin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

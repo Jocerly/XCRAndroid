@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello Corvdova</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    function jumpToPage2() {
+        window.Navigation.redirect("SecondPage.html");
+    }
+
+    function goBack() {
+        window.YTNavigation.goBack("{\"orderId\":\"900001\"}");
+    }
+    </script>
+</head>
+
+<body style="padding-top:50px">
+    <button style="font-size:23px;" onclick="goBack();">Go Back</button>
+    <br>
+    <button style="font-size:23px;" onclick="jumpToPage2();">Jump to Second Page</button>
+    <br>
+    <img style="display:none;width:240px;height:320px;" id="smallImage" src="" />
+    <h1>这是Page1</h1>
+</body>
+
+</html>

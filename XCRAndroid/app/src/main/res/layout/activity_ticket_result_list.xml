@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/search_titlebar"></include>
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/left_menu_press"
+                android:padding="@dimen/pad10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/pad5">
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        style="@style/text_nomal_style"
+                        android:text="--" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/pad5">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/text_nomal_style"
+                        android:text="总计：" />
+
+                    <TextView
+                        android:id="@+id/textAllPrice"
+                        style="@style/text_nomal_style"
+                        android:text="--" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_style"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/pad200"
+                    android:drawablePadding="@dimen/pad20"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+
+</LinearLayout>

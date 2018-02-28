@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-yatang-plugin-ytpay" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>YTPay</name>
+    <js-module name="YTPay" src="www/ytpay.js">
+        <clobbers target="YTPay" />
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="YTPay">
+        <param name="ios-package" value="CDVPay"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/CDVPay.h"/>
+    <source-file src="src/ios/CDVPay.m"/>
+    <framework src="libsqlite3.0.tbd"/>
+    <framework src="libz.tbd"/>
+    <framework src="libc++.tbd"/>
+    <framework src="CoreTelephony.framework"/>
+    <framework src="SystemConfiguration.framework"/>
+    <framework src="QuartzCore.framework"/>
+    <framework src="CoreText.framework"/>
+    <framework src="CoreGraphics.framework"/>
+    <framework src="CFNetwork.framework"/>
+    <framework src="CoreMotion.framework"/>
+  </platform>
+  <!-- android -->
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="YTPay">
+        <param name="android-package" value="com.yatang.plugin.ytpay.YTPay"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/YTPay.java" target-dir="src/com/yatang/plugin/ytpay"/>
+    <source-file src="src/android/AuthResult.java" target-dir="src/com/yatang/plugin/ytpay"/>
+    <source-file src="src/android/Base64.java" target-dir="src/com/yatang/plugin/ytpay"/>
+    <source-file src="src/android/OrderInfoUtil2_0.java" target-dir="src/com/yatang/plugin/ytpay"/>
+    <source-file src="src/android/PayResult.java" target-dir="src/com/yatang/plugin/ytpay"/>
+    <source-file src="src/android/SignUtils.java" target-dir="src/com/yatang/plugin/ytpay"/>
+  </platform>
+</plugin>

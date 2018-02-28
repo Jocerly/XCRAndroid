@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+        <!-- 扫描框布局 -->
+        <RelativeLayout
+            android:id="@+id/capture_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad200">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/capture_mask_left"-->
+                <!--android:layout_width="@dimen/pad42"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_above="@id/capture_mask_bottom"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:visibility="invisible"-->
+                <!--android:layout_below="@id/capture_mask_top"-->
+                <!--android:background="@drawable/shadow" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/capture_mask_right"-->
+                <!--android:layout_width="@dimen/pad42"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_above="@id/capture_mask_bottom"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:visibility="invisible"-->
+                <!--android:layout_below="@id/capture_mask_top"-->
+                <!--android:background="@drawable/shadow" />-->
+
+            <RelativeLayout
+                android:id="@+id/capture_crop_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad200"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/scan_line"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/pad30"
+                android:layout_marginRight="@dimen/pad10"
+                android:background="@drawable/light_not"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/textClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/pad30"
+                android:layout_marginRight="@dimen/pad10"
+                android:background="@drawable/shouquan_qrcode_ic_back"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <!-- 未打开的布局 -->
+        <RelativeLayout
+            android:id="@+id/rlNoScan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad200"
+            android:background="@color/base_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+
+            <Button
+                android:id="@+id/btnOpenScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_open_scan_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnOpenScan"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="点击开启扫一扫" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad50"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editCode"
+                style="@style/edit_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:hint="输入商品条码"
+                android:inputType="numberSigned"
+                android:paddingLeft="@dimen/pad15" />
+
+            <ImageView
+                android:id="@+id/imageCodeClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="@dimen/pad10"
+                android:src="@drawable/clear" />
+
+            <View
+                android:layout_width="@dimen/pad1_px"
+                android:layout_height="@dimen/pad30"
+                android:background="@color/line" />
+
+            <com.yatang.xc.xcr.views.PressTextView
+                android:id="@+id/textOk"
+                style="@style/text_nomal_style"
+                android:layout_width="@dimen/pad60"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@drawable/text_red_bg" />
+        </LinearLayout>
+
+        <View style="@style/line_style"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_bg">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_style"></View>
+
+                <TextView
+                    android:id="@+id/btnNext"
+                    style="@style/btnCirlceRedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/pad15"
+                    android:text="商品调价" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

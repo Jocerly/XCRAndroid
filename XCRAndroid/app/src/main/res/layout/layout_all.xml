@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/pad5"
+    android:paddingLeft="@dimen/pad15"
+    android:paddingRight="@dimen/pad15"
+    android:paddingTop="@dimen/pad15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_nomal_style"
+            android:text="门店编号：" />
+
+        <TextView
+            android:id="@+id/textStoreSerialNum"
+            style="@style/text_nomal_style"
+            android:text="--" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/text_nomal_style"
+            android:text="总计：" />
+
+        <TextView
+            android:id="@+id/textAllPrice"
+            style="@style/text_nomal_style"
+            android:text="--" />
+    </LinearLayout>
+</LinearLayout>

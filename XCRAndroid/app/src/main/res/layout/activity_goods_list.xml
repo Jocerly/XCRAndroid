@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"></include>
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textClassify"
+                    style="@style/text_nomal_style"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/pad15"
+                    android:visibility="gone"
+                    android:text="当前分类：全部"
+                    android:textColor="@color/red" />
+                <RelativeLayout
+                    android:id="@+id/rlStockAllValues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pad15"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textAllValue"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="库存总金额："
+                        />
+                    <TextView
+                        android:id="@+id/textStockAllValues"
+                        style="@style/text_nomal_style"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/red"
+                        android:text="--"
+                        android:layout_toRightOf="@+id/textAllValue"/>
+                    <TextView
+                        android:id="@+id/textSortType"
+                        style="@style/text_nomal_style"
+                        android:drawableLeft="@drawable/imgup"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:text="升序"/>
+                </RelativeLayout>
+
+
+                <View
+                    style="@style/line_style"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/pad15"></View>
+
+                <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View style="@style/line_style"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textNoData"
+                style="@style/text_nomal_style2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/pad200"
+                android:drawablePadding="@dimen/pad20"
+                android:drawableTop="@drawable/no_data"
+                android:text="@string/no_data"
+                android:visibility="gone" />
+        </FrameLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_above="@+id/llBottom"></View>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/pad8">
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btnAdd"
+            style="@style/text_nomal_style2"
+            android:layout_marginRight="@dimen/pad20"
+            android:drawablePadding="@dimen/pad5"
+            android:drawableTop="@drawable/add_goods"
+            android:textSize="11dp"
+            android:text="新增商品"
+            android:visibility="gone"
+            android:textColor="@color/text_dark" />
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btnScan"
+            style="@style/text_nomal_style2"
+            android:drawablePadding="@dimen/pad5"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/scan_code"
+            android:textSize="11dp"
+            android:text="扫一扫"
+            android:textColor="@color/text_dark" />
+    </LinearLayout>
+</RelativeLayout>

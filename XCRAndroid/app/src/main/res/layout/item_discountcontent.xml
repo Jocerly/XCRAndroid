@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad15">
+
+        <ImageView
+            android:id="@+id/imgGoodsPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/task_other" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pad15"
+            android:layout_toRightOf="@id/imgGoodsPic"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textGoodName"
+                style="@style/text_nomal_style"
+                android:layout_marginRight="@dimen/pad20"
+                android:text="商品名称" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textCode"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:visibility="gone"
+                    android:text="12345678901" />
+
+                <TextView
+                    android:id="@+id/textOldPrice"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/pad20"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="12.00" />
+                <TextView
+                    android:id="@+id/textPrice"
+                    style="@style/text_nomal_style2"
+                    android:layout_toRightOf="@id/textOldPrice"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="12.00元/袋"
+                    android:textColor="@color/red" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Stock"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="活动库存:" />
+
+                <TextView
+                    android:id="@+id/textStock"
+                    style="@style/text_nomal_style2"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:layout_toRightOf="@id/Stock"
+                    android:text="100袋"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/textRestrictionsNO"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/pad20"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="2袋"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/text_nomal_style2"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:layout_toLeftOf="@id/textRestrictionsNO"
+                    android:text="每单限购:" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/line_style" />
+</LinearLayout>

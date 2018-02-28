@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pad70"
+    android:paddingLeft="@dimen/pad15"
+    android:paddingRight="@dimen/pad15">
+
+    <FrameLayout
+        android:id="@+id/ll"
+        android:layout_width="@dimen/pad32"
+        android:layout_height="@dimen/pad32"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/imagePic"
+            android:layout_width="@dimen/pad32"
+            android:layout_height="@dimen/pad32"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/task_other" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/task_pic_mask" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/btnTask"
+        android:layout_toRightOf="@+id/ll"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/pad10"
+        android:paddingRight="@dimen/pad10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textTaskName"
+                style="@style/text_nomal_style"
+                android:drawablePadding="@dimen/pad5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="拍门头照" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textTaskTip"
+            style="@style/text_small_style_gray"
+            android:text="高额奖金"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.yatang.xc.xcr.views.PressTextView
+        android:id="@+id/btnTask"
+        style="@style/btnNomalStyle"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/task_take"
+        android:gravity="center"
+        android:text="做任务" />
+</RelativeLayout>

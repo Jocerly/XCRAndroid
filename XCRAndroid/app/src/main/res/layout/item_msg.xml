@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textDate"
+            style="@style/text_nomal_style2"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="--" />
+
+        <TextView
+            android:id="@+id/textTime"
+            style="@style/text_nomal_style2"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/pad10"
+            android:text="--" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad5"
+        android:background="@drawable/text_menu_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/pad10">
+
+        <TextView
+            android:id="@+id/textTitle"
+            style="@style/text_nomal_style"
+            android:text="情人节超值专享活动" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagePic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/defualt_img2" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

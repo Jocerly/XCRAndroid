@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capture Photo</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    function jumpToPage3() {
+        window.Navigation.redirect('ThirdPage.html');
+    }
+
+    function goBack() {
+        window.Navigation.goBack();
+    }
+    </script>
+</head>
+
+<body style="padding-top:50px">
+    <button style="font-size:23px;" onclick="goBack();">Go Back</button>
+    <br>
+    <button style="font-size:23px;" onclick="jumpToPage3();">Jump to Third Page</button>
+    <br>
+    <img style="display:none;width:240px;height:320px;" id="smallImage" src="" />
+    <h1>这是Page2</h1>
+</body>
+
+</html>

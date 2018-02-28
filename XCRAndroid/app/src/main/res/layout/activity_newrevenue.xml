@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/top"
+        android:background="@color/green"
+        android:orientation="horizontal" />
+
+    <com.yatang.xc.xcr.views.HomeJCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:orientation="vertical">
+
+        <org.jocerly.jcannotation.widget.recyclevew.MyScrollview
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.yatang.xc.xcr.views.CustomViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingEnd="@dimen/pad20"
+                    android:paddingStart="@dimen/pad20" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                </RadioGroup>
+
+
+
+                <LinearLayout
+                    android:id="@+id/mend"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:layout_marginLeft="@dimen/pad15"
+                    android:layout_marginRight="@dimen/pad15"
+                    android:background="@drawable/whit_cor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="收入分布" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textZhifubao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView1"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#00A0E9"
+                                app:opcity_color="#CCECFB" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="支付宝"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textWeixin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView2"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#25AA32"
+                                app:opcity_color="#D3EED6" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="微信"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textRevenueCash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView4"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#EB9745"
+                                app:opcity_color="#FBEADA" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="现金"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textRevenueCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView3"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#EC6D7A"
+                                app:opcity_color="#FBE2E4" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="电子券"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px1"
+                        android:layout_marginLeft="@dimen/pad20"
+                        android:layout_marginRight="@dimen/pad20"
+                        android:background="#E3E3E8" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pad10"
+                        android:layout_marginLeft="@dimen/pad20"
+                        android:layout_marginRight="@dimen/pad20"
+                        android:layout_marginTop="@dimen/pad8">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:text="利润（元）" />
+
+                        <TextView
+                            android:id="@+id/textProfitValue"
+                            style="@style/text_nomal_style"
+                            android:layout_gravity="end" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/waim"
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:layout_marginLeft="@dimen/pad15"
+                    android:layout_marginRight="@dimen/pad15"
+                    android:background="@drawable/whit_cor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="收入分布" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textGoods"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView5"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#00A0E9"
+                                app:opcity_color="#CCECFB" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="商品"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textPeis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView6"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#25AA32"
+                                app:opcity_color="#D3EED6" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="配送费"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextSwitcher
+                                android:id="@+id/textYou"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.yatang.xc.xcr.views.RevenueColorView
+                                android:id="@+id/colorView7"
+                                android:layout_width="@dimen/pad45"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/pad8"
+                                app:color="#EB9745"
+                                app:opcity_color="#FBEADA" />
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:text="优惠券"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px1"
+                        android:layout_marginLeft="@dimen/pad20"
+                        android:layout_marginRight="@dimen/pad20"
+                        android:background="#E3E3E8" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pad10"
+                        android:layout_marginLeft="@dimen/pad20"
+                        android:layout_marginRight="@dimen/pad20"
+                        android:layout_marginTop="@dimen/pad8">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:text="利润（元）" />
+
+                        <TextView
+                            android:id="@+id/textProfit"
+                            style="@style/text_nomal_style"
+                            android:layout_gravity="end" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="283dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/whit_cor"
+                    android:orientation="vertical"
+                    android:padding="@dimen/px20">
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/text_nomal_style"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/pad10"
+                        android:text="近7天营业收入趋势" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_small_style"
+                            android:layout_marginRight="5dp"
+                            android:drawableLeft="@drawable/ic_spline2"
+                            android:drawablePadding="5dp"
+                            android:text="收入" />
+
+                        <TextView
+                            style="@style/text_small_style"
+                            android:layout_marginLeft="5dp"
+                            android:drawableLeft="@drawable/ic_spline"
+                            android:drawablePadding="5dp"
+                            android:text="利润" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/linear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px1"
+                        android:background="#E3E3E8" />
+
+                    <LinearLayout
+                        android:id="@+id/rbDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px15"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/day7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="7"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="6"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="5"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="4"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="3"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="2"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/day1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:tag="1"
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </org.jocerly.jcannotation.widget.recyclevew.MyScrollview>
+    </com.yatang.xc.xcr.views.HomeJCSwipeRefreshLayout>
+</RelativeLayout>

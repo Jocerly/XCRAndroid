@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_menu_bg"
+    android:gravity="center_vertical"
+    android:padding="@dimen/pad15">
+
+    <TextView
+        android:id="@+id/textType"
+        style="@style/text_medium_style"
+        android:layout_width="@dimen/pad35"
+        android:layout_height="@dimen/pad35"
+        android:background="@drawable/btn_circle_red"
+        android:gravity="center"
+        android:text="退"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pad15"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textNO"
+            style="@style/text_nomal_style"
+            android:layout_width="@dimen/pad100"
+            android:text="100121" />
+
+        <TextView
+            android:id="@+id/textTime"
+            style="@style/text_small_style"
+            android:layout_width="wrap_content"
+            android:text="12:12:12"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textValue"
+        style="@style/text_nomal_style"
+        android:layout_marginLeft="@dimen/pad10"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:text="1222.22"
+        android:textColor="@color/red" />
+</LinearLayout>

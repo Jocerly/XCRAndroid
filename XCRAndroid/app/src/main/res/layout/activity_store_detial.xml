@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/line_style"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/pad15">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="门店名称" />
+
+                    <TextView
+                        android:id="@+id/textStoreName"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_toRightOf="@+id/text1"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+
+                <View style="@style/line_style"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="门店简称" />
+
+                    <TextView
+                        android:id="@+id/textStoreAbbreName"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_toRightOf="@+id/text2"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/line_style"></View>
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad15"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/pad15">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="所在省份" />
+
+                    <TextView
+                        android:id="@+id/textProvinceName"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+
+                <View style="@style/line_style"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="所在城市" />
+
+                    <TextView
+                        android:id="@+id/textCityName"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+
+                <View style="@style/line_style"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="所在地区" />
+
+                    <TextView
+                        android:id="@+id/textStoreLocation"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+
+                <View style="@style/line_style"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="详细地址" />
+
+                    <TextView
+                        android:id="@+id/textStoreAddress"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_toRightOf="@+id/text3"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/line_style"></View>
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad15"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/pad15">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="门店联系人" />
+
+                    <TextView
+                        android:id="@+id/textStoreContact"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+
+                <View style="@style/line_style"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:paddingRight="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="联系电话" />
+
+                    <TextView
+                        android:id="@+id/textStorePhone"
+                        style="@style/text_nomal_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="--"
+                        android:textColor="@color/text_light" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/line_style"></View>
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad15"></View>
+
+            <RelativeLayout
+                android:id="@+id/rlBankCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad60"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_centerVertical="true"
+                    android:text="外送店铺" />
+
+                <TextView
+                    android:id="@+id/textIsSupportTakeOut"
+                    style="@style/text_nomal_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="--"
+                    android:textColor="@color/text_light" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_style"></View>
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/pad5"
+                android:paddingLeft="@dimen/pad10"
+                android:text="需支持外送店铺，请联系运营督导申请" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad15"></View>
+
+            <TextView
+                android:id="@+id/textStoreCode"
+                style="@style/text_menu_style"
+                android:drawableRight="@drawable/next_bg"
+                android:text="店铺推荐二维码" />
+
+            <View style="@style/line_style"></View>
+
+
+            <TextView
+                android:id="@+id/textJoinContractUrl"
+                style="@style/text_menu_style"
+                android:drawableRight="@drawable/next_bg"
+                android:text="电子合同" />
+
+            <View style="@style/line_style"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:text="加盟保证金(元)" />
+
+                <TextView
+                    android:id="@+id/textJoinBond"
+                    style="@style/text_nomal_style"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="--" />
+            </LinearLayout>
+
+            <View style="@style/line_style"></View>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

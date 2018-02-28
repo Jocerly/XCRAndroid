@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.yatang.xc.xcr.views.PressTextView
+        android:id="@+id/icon_main"
+        style="@style/text_nomal_style"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="@dimen/pad5"
+        android:drawableTop="@drawable/iconorder"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/pad10"
+        android:text="@string/ordermanage"
+        android:textSize="@dimen/font2_1" />
+
+    <com.yatang.xc.xcr.views.DragDeleteTextView
+        android:id="@+id/num_main"
+        style="@style/text_red_num_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/pad20"
+        android:layout_marginTop="@dimen/pad3"
+        android:text="--" />
+
+    <TextView
+        android:id="@+id/textClassesNum"
+        style="@style/text_red_origin_style"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/pad20"
+        android:layout_marginTop="@dimen/pad10" />
+
+</FrameLayout>

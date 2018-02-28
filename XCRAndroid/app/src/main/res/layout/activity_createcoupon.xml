@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/pad15">
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_height="@dimen/pad30"
+                android:gravity="center_vertical"
+                android:text="优惠券金额(元)" />
+
+            <EditText
+                android:id="@+id/CouponBalance"
+                style="@style/edit_normal_none_style"
+                android:layout_height="@dimen/pad30"
+                android:layout_marginRight="@dimen/pad5"
+                android:gravity="center_vertical|right"
+                android:hint="输入券金额"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <View style="@style/line_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/pad15">
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_height="@dimen/pad30"
+                android:gravity="center_vertical"
+                android:text="订单满多少元可用" />
+
+            <EditText
+                android:id="@+id/UseCondition"
+                style="@style/edit_normal_none_style"
+                android:layout_height="@dimen/pad30"
+                android:layout_marginRight="@dimen/pad5"
+                android:gravity="center_vertical|right"
+                android:hint="输入订单金额"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <View style="@style/line_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/pad15">
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_height="@dimen/pad30"
+                android:gravity="center_vertical"
+                android:text="券有效期" />
+
+            <EditText
+                android:id="@+id/Duration"
+                style="@style/edit_normal_none_style"
+                android:layout_height="@dimen/pad30"
+                android:layout_marginRight="@dimen/pad5"
+                android:gravity="center_vertical|right"
+                android:hint="输入有效天数"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/text_nomal_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/pad15"
+            android:paddingLeft="@dimen/pad15"
+            android:paddingTop="@dimen/pad5"
+            android:text="领券后N天内有效，包含领券当日" />
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            style="@style/btnCirlceRedStyle"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/pad15"
+            android:text="保存" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/pad60">
+
+        <TextView
+            android:id="@+id/textGoodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="该商品不存在"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            style="@style/text_nomal_style"/>
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(可在下一步新增)"
+            style="@style/text_nomal_style2"
+            android:layout_alignBaseline="@+id/textGoodsName"
+            android:layout_alignBottom="@+id/textGoodsName"
+            android:layout_toRightOf="@+id/textGoodsName"
+            android:layout_toEndOf="@+id/textGoodsName" />
+        <TextView
+            android:id="@+id/textGoodsCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123456789"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/pad5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textGoodsName"
+            style="@style/text_nomal_style2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textGoodsCode"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/textUnitName"
+            style="@style/text_nomal_style2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/textUnitName"
+            android:layout_toStartOf="@+id/textUnitName"
+            android:textColor="@color/red"
+            android:id="@+id/textGoodsPrice"
+            android:layout_alignTop="@+id/textUnitName"
+            style="@style/text_nomal_style2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/pad1_px"
+        android:layout_height="@dimen/pad30"
+        android:background="@color/left_menu_press" />
+
+    <ImageView
+        android:id="@+id/imageDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/pad15"
+        android:paddingRight="@dimen/pad15"
+        android:src="@drawable/btn_delete_bg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

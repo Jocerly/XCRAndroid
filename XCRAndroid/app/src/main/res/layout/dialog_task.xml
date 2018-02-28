@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/pad35"
+    android:layout_marginRight="@dimen/pad35"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad114"
+        android:layout_marginTop="@dimen/pad150"
+        android:background="@drawable/dialog_top_back">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back_dialog_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_Title"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/pad15"
+            android:text="任务标题" />
+
+        <TextView
+            android:id="@+id/text_Tip"
+            style="@style/text_nomal_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/pad5"
+            android:text="任务提示"
+            android:textColor="@color/orange" />
+
+        <org.jocerly.jcannotation.widget.recyclevew.MyScrollview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/text_TaskExplain"
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="@dimen/pad15"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad5"
+                android:textColor="@color/black" />
+        </org.jocerly.jcannotation.widget.recyclevew.MyScrollview>
+
+        <View style="@style/line_style"></View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNomanl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad48"
+        android:layout_marginBottom="@dimen/pad150"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancle"
+            style="@style/dialog_left_btn_style"
+            android:text="关闭" />
+
+        <View style="@style/dialog_cutting_line_style" />
+
+        <Button
+            android:id="@+id/btnDoTask"
+            style="@style/dialog_right_btn_style"
+            android:text="做任务" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClose"
+        style="@style/dialog_center_bottom_btn_style"
+        android:layout_marginBottom="@dimen/pad150"
+        android:text="关闭"
+        android:visibility="gone" />
+</LinearLayout>

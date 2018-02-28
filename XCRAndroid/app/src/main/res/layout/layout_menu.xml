@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad185"
+                android:background="@color/base_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <org.jocerly.jcannotation.widget.CircleImageView
+                    android:id="@+id/imagePic"
+                    android:layout_width="@dimen/pad80"
+                    android:layout_height="@dimen/pad80"
+                    android:layout_marginTop="@dimen/pad30"
+                    android:src="@drawable/defaulthead" />
+
+
+                <TextView
+                    android:id="@+id/textStoreNo"
+                    style="@style/text_nomal_style2"
+                    android:layout_marginTop="@dimen/pad15"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="No. A000152" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVipCenter"
+                android:visibility="gone"
+                style="@style/text_menu_style"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textVipCenter"
+                    style="@style/text_nomal_style"
+                    android:drawableLeft="@drawable/left_user"
+                    android:drawablePadding="@dimen/pad15"
+                    android:drawableRight="@drawable/lv1"
+                    android:text="@string/vip_center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textStoreMsg"
+                style="@style/text_menu_style"
+                android:drawableLeft="@drawable/store"
+                android:text="@string/store_msg"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textStoreManage"
+                style="@style/text_menu_style"
+                android:drawableLeft="@drawable/store_manage"
+                android:text="线上店铺管理"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/textAboutYtSuper"
+                style="@style/text_menu_style"
+                android:drawableLeft="@drawable/about"
+                android:text="@string/about_yt_super"
+                android:textColor="@color/black" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textUpdate"
+                    style="@style/text_menu_style"
+                    android:drawableLeft="@drawable/update"
+                    android:text="@string/update"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/textVersion"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="@dimen/pad15"
+                    android:text="--" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textCall"
+                style="@style/text_menu_style"
+                android:drawableLeft="@drawable/call"
+                android:text="@string/call"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textLoginOut"
+        style="@style/text_menu_style"
+        android:drawableLeft="@drawable/exit"
+        android:text="@string/login_out"
+        android:textColor="@color/black" />
+</LinearLayout>

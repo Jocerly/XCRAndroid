@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad30"
+            android:src="@drawable/update_fail" />
+
+    <TextView
+        android:id="@+id/textToShow"
+        style="@style/text_nomal_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="很遗憾，您未能通过审核！" />
+
+    <TextView
+        android:id="@+id/textCause"
+        style="@style/text_nomal_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="原因如下：" />
+
+    <TextView
+        android:id="@+id/textMsg"
+        style="@style/text_nomal_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="加盟验收单图片不清晰" />
+
+    <TextView
+        android:id="@+id/btnUpload"
+        style="@style/btnCirlceRedStyle"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="重做任务" />
+
+</LinearLayout>

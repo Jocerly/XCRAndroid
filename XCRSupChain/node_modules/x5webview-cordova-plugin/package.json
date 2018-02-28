@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/runner525/x5webview-cordova-plugin",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/runner525/x5webview-cordova-plugin",
+        "spec": "git+https://github.com/runner525/x5webview-cordova-plugin.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:runner525/x5webview-cordova-plugin.git",
+          "sshUrl": "git+ssh://git@github.com/runner525/x5webview-cordova-plugin.git",
+          "httpsUrl": "git+https://github.com/runner525/x5webview-cordova-plugin.git",
+          "gitUrl": "git://github.com/runner525/x5webview-cordova-plugin.git",
+          "shortcut": "github:runner525/x5webview-cordova-plugin",
+          "directUrl": "https://raw.githubusercontent.com/runner525/x5webview-cordova-plugin/master/package.json"
+        }
+      },
+      "D:\\yatang\\XCRSupChain\\node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/runner525/x5webview-cordova-plugin.git",
+  "_id": "x5webview-cordova-plugin@1.1.1",
+  "_inCache": true,
+  "_location": "/x5webview-cordova-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/runner525/x5webview-cordova-plugin",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/runner525/x5webview-cordova-plugin",
+    "spec": "git+https://github.com/runner525/x5webview-cordova-plugin.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:runner525/x5webview-cordova-plugin.git",
+      "sshUrl": "git+ssh://git@github.com/runner525/x5webview-cordova-plugin.git",
+      "httpsUrl": "git+https://github.com/runner525/x5webview-cordova-plugin.git",
+      "gitUrl": "git://github.com/runner525/x5webview-cordova-plugin.git",
+      "shortcut": "github:runner525/x5webview-cordova-plugin",
+      "directUrl": "https://raw.githubusercontent.com/runner525/x5webview-cordova-plugin/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/runner525/x5webview-cordova-plugin.git#2136c1c570e9b0f26ddee5b18f8ebc3b95ad2fc0",
+  "_shasum": "d9bbe75261afbf73169be16d36cfd3bc847d29e0",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/runner525/x5webview-cordova-plugin",
+  "_where": "D:\\yatang\\XCRSupChain\\node_modules",
+  "author": {
+    "name": "lz"
+  },
+  "bugs": {
+    "url": "https://github.com/runner525/x5webview-cordova-plugin/issues"
+  },
+  "cordova": {
+    "id": "x5webview-cordova-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Changes the default WebView to x5engine",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=5.2.0"
+    }
+  ],
+  "gitHead": "2136c1c570e9b0f26ddee5b18f8ebc3b95ad2fc0",
+  "homepage": "https://github.com/runner525/x5webview-cordova-plugin#readme",
+  "keywords": [
+    "cordova",
+    "chromium",
+    "x5engine",
+    "webview",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "x5webview-cordova-plugin",
+  "optionalDependencies": {},
+  "readme": " # x5webview-cordova-plugin\r\nx5webview-cordova-plugin 是腾讯浏览服务(TBS)为cordova框架提供的用于android平台的cordova插件，旨在为android平台提供更好的webview浏览体验．\r\n\r\n一．接入步骤：\r\n1.向cordiva工程中添加x5webview插件,有如下两种方式：\r\n```\r\n(1)cordova plugin add x5webview-cordova-plugin \r\n(2)cordova plugin add https://github.com/runner525/x5webview-cordova-plugin.git\r\n\r\n```\r\n\r\n二．熟悉android开发的同学可以参考x5官网来灵活使用x5内核．常用链接如下：\r\n\r\n官网(https://x5.tencent.com/tbs/)\r\n\r\n常见问题(https://x5.tencent.com/tbs/faq.html)\r\n\r\n论坛(http://bbs.mb.qq.com/forum-112-1.html)\r\n\r\n内核加载问题检测工具(http://bbs.mb.qq.com/thread-1944983-1-1.html)\r\n\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runner525/x5webview-cordova-plugin.git"
+  },
+  "version": "1.1.1"
+}

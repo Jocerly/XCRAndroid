@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/text_menu_bg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/text_bank"
+        style="@style/text_nomal_style"
+        android:paddingLeft="@dimen/pad15"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad50" />
+</LinearLayout>

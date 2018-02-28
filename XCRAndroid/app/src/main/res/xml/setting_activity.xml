@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="服务器配置">
+        <ListPreference
+            android:defaultValue="@string/default_setting_host_entries_value"
+            android:dialogTitle="选择环境"
+            android:entries="@array/setting_host_entries"
+            android:entryValues="@array/setting_host_entries_value"
+            android:key="env_selection"
+            android:summary="选择当前需要访问的环境配置"
+            android:title="环境选择" />
+        <EditTextPreference
+            android:dependency="env_selection"
+            android:key="host"
+            android:summary="点击设置发起请求的服务器地址"
+            android:title="服务器地址" />
+        <EditTextPreference
+            android:dependency="env_selection"
+            android:key="ts_host"
+            android:summary="推送标签"
+            android:title="推送标签" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="供应链配置">
+        <ListPreference android:title="web包加载方式"
+            android:summary="默认"
+            android:key="sup_load_way"
+            android:entries="@array/setting_sup_entries"
+            android:entryValues="@array/setting_sup_entries_value">
+        </ListPreference>
+        <EditTextPreference android:title="供应链服务器地址"
+            android:summary="请输入供应链服务器地址"
+            android:key="sup_server"/>
+    </PreferenceCategory>
+</PreferenceScreen>

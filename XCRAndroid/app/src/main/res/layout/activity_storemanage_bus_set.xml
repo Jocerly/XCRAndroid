@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name=".StoreManageActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustResize">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/line_style"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_marginBottom="@dimen/pad5"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="营业时间" />
+
+            <View style="@style/line_style" />
+
+
+            <RelativeLayout
+                android:id="@+id/lineOpenTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad60"
+                android:background="@drawable/text_menu_bg"
+                android:gravity="center_vertical"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_alignParentLeft="true"
+                    android:text="开业时间" />
+
+                <TextView
+                    android:id="@+id/textOpenTime"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical|right"
+                    android:text="请选择" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lineCloseTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad60"
+                android:background="@drawable/text_menu_bg"
+                android:gravity="center_vertical"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_alignParentLeft="true"
+                    android:text="打烊时间" />
+
+                <TextView
+                    android:id="@+id/textCloseTime"
+                    style="@style/text_nomal_style2"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical|right"
+                    android:text="请选择" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_marginBottom="@dimen/pad5"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="定位店铺地址" />
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/relayLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad60"
+                android:background="@drawable/text_menu_bg"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    android:id="@+id/latitude"
+                    style="@style/text_nomal_style"
+                    android:layout_centerVertical="true"
+                    android:text="地图定位" />
+
+                <TextView
+                    android:id="@+id/textLocation"
+                    style="@style/text_nomal_style"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical|right"
+                    android:text="点击开始定位"
+                    android:textColor="@color/red" />
+
+                <ImageView
+                    android:id="@+id/imageLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/pad5"
+                    android:layout_toLeftOf="@+id/textLocation"
+                    android:layout_toStartOf="@+id/textLocation"
+                    android:src="@drawable/location" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad5"
+                android:text="注意：地址供用户搜索寻找你的店铺，最好开启GPS，定位准确。"
+                android:textColor="@color/red" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_marginBottom="@dimen/pad5"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="配送设置" />
+
+            <View style="@style/line_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:text="起送金额(元)" />
+
+                    <EditText
+                        android:id="@+id/editStartPrice"
+                        style="@style/edit_normal_none_style"
+                        android:layout_height="match_parent"
+                        android:digits="0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="输入起送金额"
+                        android:inputType="number"
+                        android:maxLength="3" />
+                </LinearLayout>
+
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:text="配送费(元)" />
+
+                    <EditText
+                        android:id="@+id/editDeliveryFee"
+                        style="@style/edit_normal_none_style"
+                        android:layout_height="match_parent"
+                        android:digits="0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="输入配送费"
+                        android:inputType="number"
+                        android:maxLength="2" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:text="配送范围(公里)" />
+
+                    <EditText
+                        android:id="@+id/editDeliveryScope"
+                        style="@style/edit_normal_none_style"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|right"
+                        android:hint="输入公里数"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                android:id="@+id/textDeliveryMsg"
+                style="@style/text_nomal_style2"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad5"
+                android:text="公里数决定配送的半径，即店铺的配送范围是方圆几公里" />
+
+            <View style="@style/line_style"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:padding="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_centerVertical="true"
+                        android:text="免配送费" />
+
+                    <com.yatang.xc.xcr.views.CheckSwitchButton
+                        android:id="@+id/cbFreeDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+
+                <LinearLayout
+                    android:id="@+id/llFreeDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad60"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/pad15">
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:text="满多少元免配送费" />
+
+                    <EditText
+                        android:id="@+id/editFreeDeliveryFee"
+                        style="@style/edit_normal_none_style"
+                        android:layout_height="match_parent"
+                        android:digits="0123456789"
+                        android:gravity="center_vertical|right"
+                        android:hint="输入金额"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </LinearLayout>
+
+
+                <View style="@style/line_style"></View>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSave"
+                style="@style/btnCirlceRedStyle"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/pad20"
+                android:layout_marginLeft="@dimen/pad15"
+                android:layout_marginRight="@dimen/pad15"
+                android:layout_marginTop="@dimen/pad15"
+                android:text="保存" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

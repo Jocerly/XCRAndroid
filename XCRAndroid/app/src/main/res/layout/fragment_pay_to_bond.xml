@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad150"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_nomal_style2"
+            android:text="雅堂小超加盟保证金" />
+
+
+        <TextView
+            android:id="@+id/textBondValue"
+            style="@style/text_large_style"
+            android:text="--"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/textPayBond"
+        style="@style/text_menu_style"
+        android:drawableLeft="@drawable/pay_wechat"
+        android:drawablePadding="@dimen/pad6"
+        android:drawableRight="@drawable/next"
+        android:text="微信支付 " />
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/textPayBondMsg"
+        style="@style/text_small_style_gray"
+        android:layout_margin="@dimen/pad15"
+        android:lineSpacingExtra="@dimen/pad8"
+        android:text="@string/pay_bond_msg" />
+</LinearLayout>

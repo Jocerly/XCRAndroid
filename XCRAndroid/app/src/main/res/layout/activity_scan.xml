@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"></include>
+
+    <RelativeLayout
+        android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/title">
+
+        <ImageView
+            android:id="@+id/capture_mask_top"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shadow" />
+
+        <RelativeLayout
+            android:id="@+id/capture_crop_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad200"
+            android:background="@drawable/qr_code_bg"
+            android:layout_below="@+id/capture_mask_top"
+            android:layout_toEndOf="@+id/capture_mask_left">
+
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/scan_line"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/pad15"
+            android:background="@drawable/light_not" />
+
+        <ImageView
+            android:id="@+id/capture_mask_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/capture_crop_view"
+            android:background="@drawable/shadow" />
+
+        <ImageView
+            android:id="@+id/capture_mask_left"
+            android:layout_width="@dimen/pad30"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_mask_bottom"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/capture_mask_top"
+            android:background="@drawable/shadow" />
+
+        <ImageView
+            android:id="@+id/capture_mask_right"
+            android:layout_width="@dimen/pad30"
+            android:layout_height="match_parent"
+            android:layout_above="@id/capture_mask_bottom"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/capture_mask_top"
+            android:background="@drawable/shadow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editCode"
+            style="@style/edit_nomal_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789"
+            android:gravity="center_vertical"
+            android:hint="输入商品条码"
+            android:inputType="numberSigned"
+            android:paddingLeft="@dimen/pad15" />
+
+        <ImageView
+            android:id="@+id/imageCodeClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="@dimen/pad10"
+            android:src="@drawable/clear" />
+
+        <View
+            android:layout_width="@dimen/pad1_px"
+            android:layout_height="@dimen/pad30"
+            android:background="@color/line" />
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/textOk"
+            style="@style/text_nomal_style"
+            android:layout_width="@dimen/pad60"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/text_red_bg" />
+    </LinearLayout>
+
+
+</RelativeLayout>

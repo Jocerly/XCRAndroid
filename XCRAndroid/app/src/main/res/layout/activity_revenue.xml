@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title_bar" />
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad140"
+                android:background="@color/green"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textRevenueAllValue"
+                    style="@style/text_large_style"
+                    android:text="--"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textRevenueMsg"
+                    style="@style/text_nomal_style"
+                    android:layout_below="@+id/textRevenueAllValue"
+                    android:layout_marginTop="@dimen/pad10"
+                    android:text="本月实时（元）"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlRevenueCurrentMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad60"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/pad15"
+                            android:text="利润" />
+
+                        <TextView
+                            android:id="@+id/textProfitValue"
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/pad15"
+                            android:text="--" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/line_style"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/pad15"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/pad5"
+                                android:drawableLeft="@drawable/zhifubao"
+                                android:drawablePadding="@dimen/pad5"
+                                android:padding="@dimen/pad10"
+                                android:text="支付宝"
+                                android:textColor="@color/text_light" />
+
+                            <TextView
+                                android:id="@+id/textZhifubao"
+                                style="@style/text_medium_style"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingBottom="@dimen/pad10"
+                                android:text="--"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <View style="@style/dialog_cutting_line_style" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/pad5"
+                                android:drawableLeft="@drawable/weixin"
+                                android:drawablePadding="@dimen/pad5"
+                                android:padding="@dimen/pad10"
+                                android:text="微信"
+                                android:textColor="@color/text_light" />
+
+                            <TextView
+                                android:id="@+id/textWeixin"
+                                style="@style/text_medium_style"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingBottom="@dimen/pad10"
+                                android:text="--"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/line_style"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/pad5"
+                                android:drawableLeft="@drawable/gouponcash"
+                                android:drawablePadding="@dimen/pad5"
+                                android:padding="@dimen/pad10"
+                                android:text="电子券"
+                                android:textColor="@color/text_light" />
+
+                            <TextView
+                                android:id="@+id/textRevenueCard"
+                                style="@style/text_medium_style"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingBottom="@dimen/pad10"
+                                android:text="--"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <View style="@style/dialog_cutting_line_style" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_nomal_style"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/pad5"
+                                android:drawableLeft="@drawable/xianjin"
+                                android:drawablePadding="@dimen/pad5"
+                                android:padding="@dimen/pad10"
+                                android:text="现金"
+                                android:textColor="@color/text_light" />
+
+                            <TextView
+                                android:id="@+id/textRevenueCash"
+                                style="@style/text_medium_style"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingBottom="@dimen/pad10"
+                                android:text="--"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/pad15"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="@dimen/pad10"
+                        android:text="近7天营业收入趋势" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad300" >
+
+                        <com.yatang.xc.xcr.views.SplineChartView
+                            android:id="@+id/spChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:max_num="7"
+                            app:max_x="70"
+                            app:max_y="100" />
+
+                        <ImageView
+                            android:id="@+id/img_animator"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/pad15"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="@dimen/pad10"
+                        android:text="近7天营业利润趋势" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad300" >
+
+                        <com.yatang.xc.xcr.views.SplineChartView
+                            android:id="@+id/spChart2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:max_num="7"
+                            app:max_x="70"
+                            app:max_y="100" />
+
+                        <ImageView
+                            android:id="@+id/img_animator2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

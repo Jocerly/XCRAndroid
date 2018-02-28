@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pad35"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/textPayType"
+        style="@style/text_ticket_style"
+        android:text="电子券金额" />
+
+    <TextView
+        android:id="@+id/textEqualMny"
+        style="@style/text_ticket_style"
+        android:layout_alignParentRight="true"
+        android:text="--"
+        android:textColor="@color/red" />
+
+</RelativeLayout>

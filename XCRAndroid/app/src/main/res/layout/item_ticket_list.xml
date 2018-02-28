@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pad70"
+    android:background="@drawable/text_menu_bg"
+    android:paddingLeft="@dimen/pad15"
+    android:paddingRight="@dimen/pad15">
+
+    <ImageView
+        android:id="@+id/imgTicketType"
+        style="@style/text_medium_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ticket_weixin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgTicketType"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/pad10"
+        android:paddingRight="@dimen/pad10">
+
+        <TextView
+            android:id="@+id/textName"
+            style="@style/text_nomal_style"
+            android:layout_marginBottom="@dimen/pad5"
+            android:drawablePadding="@dimen/pad5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="--" />
+
+
+        <TextView
+            android:id="@+id/textTip"
+            style="@style/text_small_style_gray"
+            android:text="--" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textElectronic"
+        style="@style/text_small_style_gray"
+        android:layout_width="@dimen/pad50"
+        android:layout_centerInParent="true"
+        android:background="@drawable/settlement_statue_no"
+        android:gravity="center"
+        android:text="电子券"
+        android:textColor="@color/icon_return" />
+
+    <TextView
+        android:id="@+id/textValue"
+        style="@style/text_nomal_style"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/next_bg"
+        android:gravity="right|center_vertical"
+        android:text="--"
+        android:textColor="@color/red" />
+</RelativeLayout>

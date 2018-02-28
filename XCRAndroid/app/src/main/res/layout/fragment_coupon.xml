@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView>
+
+            <!--<View-->
+            <!--style="@style/line_style"-->
+            <!--android:layout_gravity="bottom"></View>-->
+
+            <TextView
+                android:id="@+id/textNoData"
+                style="@style/text_nomal_style2"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/pad20"
+                android:drawableTop="@drawable/no_data"
+                android:text="@string/no_data"
+                android:visibility="gone" />
+        </FrameLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

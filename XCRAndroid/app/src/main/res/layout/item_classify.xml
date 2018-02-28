@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/llClassify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_classify_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/pad5">
+
+        <ImageView
+            android:id="@+id/imageClassifyPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/defualt_classify" />
+
+        <TextView
+            android:id="@+id/textClassifyName"
+            style="@style/text_nomal_style2"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/pad5"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="分类分类分"
+            android:textColor="@color/text_dark"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

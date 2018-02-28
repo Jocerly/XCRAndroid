@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/edit_nomal_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad45"
+            android:layout_marginLeft="@dimen/pad15"
+            android:layout_weight="1"
+            android:background="@drawable/btn_line_recircle_gray"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="@dimen/pad5"
+            android:gravity="center_vertical"
+            android:hint="输入小区/写字楼/学校等"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <View style="@style/line_style"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_bg"
+            android:visibility="invisible"></com.baidu.mapapi.map.MapView>
+
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:src="@drawable/map_location" />
+
+        <ImageView
+            android:id="@+id/imgaLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/datouzhen" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

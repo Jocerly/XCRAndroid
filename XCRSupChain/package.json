@@ -1,0 +1,29 @@
+{
+    "name": "com.yatang.xc.supchain",
+    "version": "0.0.1",
+    "displayName": "XCRSupChain",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "com-yatang-plugin-ytlogicservice": {},
+            "com-yatang-plugin-ytnavigation": {},
+            "com-yatang-plugin-ytnetwork": {},
+            "com-yatang-plugin-ytnotification": {},
+            "com-yatang-plugin-ytpay": {},
+            "x5webview-cordova-plugin": {}
+        }
+    },
+    "dependencies": {
+        "com-yatang-plugin-ytlogicservive": "file:///D:\\yatang\\gitrepo\\other\\com-yatang-plugin-ytlogicservice",
+        "cordova-android": "~6.2.3",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-whitelist": "1",
+        "cordova-plugin-ytlogicservive": "file:///D:\\yatang\\supChainPlugin\\cordova-plugin-ytlogicservice",
+        "cordova-plugin-ytnotification": "file:///D:\\yatang\\supChainPlugin\\cordova-plugin-ytnotification",
+        "x5webview-cordova-plugin": "git+https://github.com/runner525/x5webview-cordova-plugin.git"
+    }
+}

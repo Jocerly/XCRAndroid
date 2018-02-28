@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <TextView
+        android:id="@+id/textFilter"
+        style="@style/text_medium_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pad10"
+        android:layout_marginTop="@dimen/pad15"
+        android:gravity="center_horizontal"
+        android:text="近七天"
+        android:textSize="@dimen/font3_1" />
+
+    <View style="@style/line_style" />
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/myScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:scrollbars="none">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lineContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/relaySales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/list_back"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/pad10"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:paddingTop="@dimen/pad10">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentLeft="true"
+                            android:text="商品销量排行榜" />
+
+                        <ImageView
+                            android:id="@+id/imgNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/next_bg" />
+                    </RelativeLayout>
+
+                    <View style="@style/line_style" />
+
+                    <org.jocerly.jcannotation.widget.listView.CustomerListView
+                        android:id="@+id/recyclerSales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:divider="#00ffffff" />
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_below="@id/recyclerSales" />
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_below="@id/recyclerSales"
+                        android:layout_marginTop="@dimen/pad20" />
+
+                    <RelativeLayout
+                        android:id="@+id/relayGain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/list_back"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/pad10"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:paddingTop="@dimen/pad10">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentLeft="true"
+                            android:text="商品利润排行榜" />
+
+                        <ImageView
+                            android:id="@+id/imgNext1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/next_bg" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/line_style" />
+
+                    <org.jocerly.jcannotation.widget.listView.CustomerListView
+                        android:id="@+id/recyclerGain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:divider="#00ffffff" />
+
+                    <View style="@style/line_style" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/pad200"
+                    android:drawablePadding="@dimen/pad20"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </ScrollView>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

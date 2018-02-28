@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+		fromXDelta,fromYDelta起始时X，Y座标,屏幕右下角的座标是X:320,Y:480
+		toXDelta，toYDelta动画结束时X,Y的座标
+
+    -->
+    <translate
+        android:duration="300"
+        android:fromYDelta="100.0%"
+        android:toYDelta="0.0" />
+
+    <!--
+		fromAlpha:开始时透明度
+		toAlpha：结束时透明度
+		duration：动画持续时间
+
+    -->
+     <alpha
+        android:duration="200"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" /> 
+
+</set>

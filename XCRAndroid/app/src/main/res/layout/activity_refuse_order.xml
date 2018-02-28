@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad15"
+        android:background="@color/base_bg"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tipSelect"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="选择拒绝原因" />
+
+        <TextView
+            style="@style/text_small_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pad15"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/tipSelect"
+            android:text="(注意:一天只有3次拒绝机会)"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="客户地址超出配送范围" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb2"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="商品已售完" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginLeft="@dimen/pad15"></View>
+
+            <RadioButton
+                android:id="@+id/rb3"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="联系不上客户" />
+
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb4"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="客户不买了" />
+
+            <LinearLayout
+                android:id="@+id/lin4"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb5"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="不在营业时间" />
+
+            <LinearLayout
+                android:id="@+id/lin5"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rbOther"
+                style="@style/chenckbox_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:checked="false"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15"
+                android:text="其他原因" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linOtherReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad15"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他原因" />
+
+        <EditText
+            android:id="@+id/editReson"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:layout_marginTop="@dimen/pad10"
+            android:background="@color/white"
+            android:padding="@dimen/pad10"
+            android:hint="请简要阐述拒单原因" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textTip"
+        style="@style/text_small_style_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad10"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/pad10"
+        android:paddingRight="@dimen/pad10"
+        android:paddingTop="@dimen/pad20">
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            style="@style/btnCirlceRedStyle"
+            android:layout_width="match_parent"
+            android:text="确定并关闭订单" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

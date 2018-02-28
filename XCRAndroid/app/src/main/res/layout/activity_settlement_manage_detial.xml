@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/pad5"
+        android:paddingLeft="@dimen/pad15"
+        android:paddingTop="@dimen/pad15"
+        android:paddingRight="@dimen/pad15"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textType"
+            style="@style/text_nomal_style"
+            android:text="未结算" />
+        <TextView
+            style="@style/text_nomal_style"
+            android:text="总计："
+            android:layout_toLeftOf="@+id/textSettlementDetialAllValue"
+            />
+        <TextView
+            android:id="@+id/textSettlementDetialAllValue"
+            style="@style/text_nomal_style"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+    <View style="@style/line_style"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/pad15">
+            <ImageView
+                android:id="@+id/imageSettlementSucPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cash" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textSettlementSuc"
+                    style="@style/text_nomal_style"
+                    android:layout_marginLeft="@dimen/pad10"
+                    android:text="成交" />
+
+                <TextView
+                    android:id="@+id/textSettlementSucDate"
+                    style="@style/text_nomal_style2"
+                    android:layout_marginLeft="@dimen/pad10"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="2017-02-12" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textSettlementSucValue"
+                style="@style/text_nomal_style"
+                android:text="￥588"
+                android:layout_gravity="center"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+        <View style="@style/line_style"
+            android:layout_marginLeft="@dimen/pad15"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/pad15">
+            <ImageView
+                android:id="@+id/imageSettlementRefuse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jiekuan" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textSettlementRefuse"
+                    style="@style/text_nomal_style"
+                    android:layout_marginLeft="@dimen/pad10"
+                    android:text="退货" />
+
+                <TextView
+                    android:id="@+id/textSettlementRefuseDate"
+                    style="@style/text_nomal_style2"
+                    android:layout_marginLeft="@dimen/pad10"
+                    android:layout_marginTop="@dimen/pad5"
+                    android:text="2017-02-12" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textSettlementRefuseValue"
+                style="@style/text_nomal_style"
+                android:text="￥588"
+                android:layout_gravity="center"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSettlementTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/pad15"
+        android:layout_marginLeft="@dimen/pad15">
+
+        <TextView
+            android:id="@+id/textTime"
+           style="@style/text_nomal_style2"
+            android:textColor="@color/red"
+            android:text="确认时间："/>
+
+        <TextView
+            android:id="@+id/textSettlementTime"
+            style="@style/text_nomal_style2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llErrorMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad10">
+
+        <TextView
+            style="@style/text_nomal_style2"
+            android:layout_width="wrap_content"
+            android:text="失败原因："
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textErrorMsg"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:text="失败原因" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/isFinished"
+        style="@style/btnCirlceRedStyle"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginRight="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad30"
+        android:text="确认结算单" />
+
+    <TextView
+        android:id="@+id/textSettlementMsg"
+        style="@style/text_nomal_style2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginRight="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad10"
+        android:gravity="center_vertical"
+        android:text="@string/txt_settlement_msg"
+        android:visibility="gone"/>
+</LinearLayout>

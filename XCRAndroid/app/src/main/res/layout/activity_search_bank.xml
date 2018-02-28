@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/searchView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/pad50"
+        android:layout_below="@+id/titlebar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad10"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/editSearch"
+                style="@style/edit_nomal_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad35"
+                android:background="@drawable/btn_search_back"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/pad8"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:paddingLeft="@dimen/pad5"
+                android:paddingRight="@dimen/pad5" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:layout_toLeftOf="@+id/imageGoodsCode"
+                    android:visibility="gone"
+                    android:src="@drawable/clear" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btnSearch"
+            style="@style/text_nomal_style"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/pad15"
+            android:text="搜索" />
+    </RelativeLayout>
+
+    <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+        android:id="@+id/listbank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchView" />
+
+</RelativeLayout>

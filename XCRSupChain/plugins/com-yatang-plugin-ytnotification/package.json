@@ -1,0 +1,14 @@
+{
+  "name": "cordova-plugin-ytnotification",
+  "version": "1.0.0",
+  "description": "notification plugin for cordova",
+  "main": "ytnotification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notification"
+  ],
+  "author": "lixiang",
+  "license": "ISC"
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/text_nomal_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/pad10"
+        android:paddingLeft="@dimen/pad15"
+        android:paddingTop="@dimen/pad15"
+        android:text="销售概况" />
+
+    <View style="@style/line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/pad15"
+        android:paddingTop="@dimen/pad15"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSalesNumber"
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="销量" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSalesMoney"
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="--.--" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="销售额(元)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textDiscount"
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="--.--" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:text="优惠(元)" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <TextView
+        style="@style/text_nomal_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/pad10"
+        android:paddingLeft="@dimen/pad15"
+        android:paddingTop="@dimen/pad15"
+        android:text="商品销售分布" />
+    <View style="@style/line_style" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

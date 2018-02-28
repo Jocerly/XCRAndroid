@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="活动名称" />
+
+                <EditText
+                    android:id="@+id/EventName"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:gravity="center_vertical|right"
+                    android:hint="输入活动名称"
+                    android:singleLine="false" />
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="活动时间" />
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/rlStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:background="@drawable/text_menu_bg"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_centerVertical="true"
+                    android:text="开始日期" />
+
+                <TextView
+                    android:id="@+id/StartTime"
+                    style="@style/text_nomal_style2"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/pad60"
+                    android:text="请选择" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <View
+                    style="@style/line_style"
+                    android:layout_marginLeft="@dimen/pad15"></View>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad50"
+                android:background="@drawable/text_menu_bg"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_centerVertical="true"
+                    android:text="结束日期" />
+
+                <TextView
+                    android:id="@+id/EndTime"
+                    style="@style/text_nomal_style2"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/pad60"
+                    android:text="请选择" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_style"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="推广渠道"
+                android:visibility="gone" />
+
+            <View style="@style/line_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbStore"
+                    style="@style/chenckbox_nomal_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad50"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/pad15"
+                    android:paddingRight="@dimen/pad15"
+                    android:text="店铺首页" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_marginLeft="@dimen/pad15"></View>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbCenter"
+                    style="@style/chenckbox_nomal_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad50"
+                    android:checked="false"
+                    android:paddingLeft="@dimen/pad15"
+                    android:paddingRight="@dimen/pad15"
+                    android:text="领券中心" />
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad30"
+                    android:gravity="center_vertical"
+                    android:text="券礼包数量" />
+
+                <EditText
+                    android:id="@+id/TotalCount"
+                    style="@style/edit_normal_none_style"
+                    android:layout_height="@dimen/pad30"
+                    android:layout_marginRight="@dimen/pad5"
+                    android:digits="0123456789"
+                    android:gravity="center_vertical|right"
+                    android:hint="输入发放数量"
+                    android:inputType="number"
+                    android:singleLine="false" />
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_small_style_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="一个券礼包内含一张或多张优惠券" />
+
+            <TextView
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="每人限领"
+                android:textColor="@color/text_light" />
+
+            <View style="@style/line_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbOne"
+                        style="@style/chenckbox_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad50"
+                        android:checked="true"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:text="一次" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <View
+                            style="@style/line_style"
+                            android:layout_marginLeft="@dimen/pad15"></View>
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/rbEveryDay"
+                        style="@style/chenckbox_nomal_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad50"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/pad15"
+                        android:paddingRight="@dimen/pad15"
+                        android:text="每天一次" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="@dimen/pad10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad60"
+                android:background="@drawable/text_menu_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="限本店新客" />
+
+
+                <com.yatang.xc.xcr.views.CheckSwitchButton
+                    android:id="@+id/IsNewUserCanUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_small_style_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad15"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad5"
+                android:text="新客活动仅限每人领取一次" />
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingRight="@dimen/pad15">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/pad15"
+                    android:layout_marginTop="@dimen/pad15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textLeft"
+                        style="@style/text_nomal_style"
+                        android:text="优惠券" />
+
+                    <TextView
+                        style="@style/text_small_style_gray"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="最多添加5张券" />
+                </LinearLayout>
+
+                <com.yatang.xc.xcr.views.PressTextView
+                    android:id="@+id/textAdd"
+                    style="@style/text_nomal_style"
+                    android:layout_height="@dimen/pad60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/pad5"
+                    android:text="+添加"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <org.jocerly.jcannotation.widget.listView.CustomerListView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/base_bg"
+                android:dividerHeight="@dimen/pad15"
+                android:padding="@dimen/pad15" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

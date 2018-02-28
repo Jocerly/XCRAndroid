@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <org.jocerly.jcannotation.widget.recyclevew.MyScrollview
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/viptopback"
+                android:paddingTop="@dimen/pad15">
+
+                <LinearLayout
+                    android:id="@+id/lin_LevelBack"
+                    android:layout_width="@dimen/pad280"
+                    android:layout_height="@dimen/pad150"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/pad80"
+                    android:background="@drawable/v0_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgVip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad15"
+                        android:src="@drawable/v0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pad12"
+                            android:text="近12个月累计积分: "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/pad15" />
+
+                        <TextView
+                            android:id="@+id/textAccumulatedIntegral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pad12"
+                            android:text="--"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/pad15" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textTimeInterval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad3"
+                        android:text="-- - --"
+                        android:textColor="@color/half_white"
+                        android:textSize="@dimen/pad11" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad12"
+                        android:text="每月1号更新等级"
+                        android:textColor="@color/half_white"
+                        android:textSize="@dimen/pad11" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad70"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.yatang.xc.xcr.views.PressTextView
+                    android:id="@+id/btn_MyIntegral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad5"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/pad3"
+                    android:drawableTop="@drawable/btn_myintegral"
+                    android:gravity="center"
+                    android:text="我的积分"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/pad12" />
+
+                <com.yatang.xc.xcr.views.PressTextView
+                    android:id="@+id/btn_VipLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad5"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/pad3"
+                    android:drawableTop="@drawable/btn_viplevel"
+                    android:gravity="center"
+                    android:text="会员等级"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/pad12" />
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="我的特权" />
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <org.jocerly.jcannotation.widget.listView.CustomerListView
+                    android:id="@+id/listPrivilege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad5"
+                android:paddingLeft="@dimen/pad15"
+                android:paddingTop="@dimen/pad15"
+                android:text="赚积分" />
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <org.jocerly.jcannotation.widget.listView.CustomerListView
+                    android:id="@+id/listIntegral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/line"
+                    android:dividerHeight="1px" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.recyclevew.MyScrollview>
+
+</LinearLayout>

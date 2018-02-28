@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/linTop"
+        style="@style/line_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textNO"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="#44"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textTime"
+            style="@style/text_nomal_style"
+            android:layout_marginLeft="@dimen/pad5"
+            android:layout_toRightOf="@id/textNO"
+            android:text="下单时间：2017-06-10 11:00:21" />
+
+        <TextView
+            android:id="@+id/text_finish"
+            style="@style/text_nomal_style"
+            android:layout_alignParentRight="true"
+            android:text="已完成"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/list_back"
+            android:padding="@dimen/pad15"
+            android:scrollbars="none" />
+
+        <ImageView
+            android:id="@+id/imgClick"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000" />
+    </FrameLayout>
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:id="@+id/relayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginRight="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textName"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="黄龙真人" />
+
+        <TextView
+            android:id="@+id/textGender"
+            style="@style/text_nomal_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pad10"
+            android:layout_toRightOf="@+id/textName"
+            android:text="先生/女士"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textPhone"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pad30"
+            android:layout_toRightOf="@+id/textGender"
+            android:text="12345678901" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textAddress"
+        style="@style/text_nomal_style2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pad15"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginRight="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad5"
+        android:text="地址:四川省成都市双流县兴隆湖环湖路雅堂电商大厦" />
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/pad15">
+
+        <TextView
+            android:id="@+id/textDeliveryType"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="送货上门"
+            android:layout_marginRight="@dimen/pad15"
+            android:textColor="@color/red" />
+
+
+        <TextView
+            android:id="@+id/textPrice"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="￥200.00"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/text_Price"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/textPrice"
+            android:gravity="center_vertical"
+            android:text="实付款:"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textGoodsCount"
+            style="@style/text_nomal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/pad15"
+            android:layout_toLeftOf="@id/text_Price"
+            android:text="共0件商品" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:id="@+id/relaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad15"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/textLeftTime"
+            style="@style/text_nomal_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="剩余26分钟" />
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btn3"
+            style="@style/btnNomalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/whitebtnback"
+            android:gravity="center|center_vertical"
+            android:text="接单"
+            android:textColor="@color/black" />
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btn2"
+            style="@style/btnNomalStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/pad15"
+            android:layout_toLeftOf="@id/btn3"
+            android:background="@drawable/whitebtnback"
+            android:gravity="center|center_vertical"
+            android:text="联系客户"
+            android:textColor="@color/black" />
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/btn1"
+            style="@style/btnNomalStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/pad15"
+            android:layout_toLeftOf="@id/btn2"
+            android:background="@drawable/whitebtnback"
+            android:gravity="center|center_vertical"
+            android:text="拒绝"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <LinearLayout
+        android:id="@+id/lineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad15"
+        android:background="@color/base_bg"
+        android:orientation="horizontal" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/pad15"
+    android:paddingRight="@dimen/pad15"
+    android:paddingTop="@dimen/pad15">
+
+    <ImageView
+        android:id="@+id/imagePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cash" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textName"
+            style="@style/text_nomal_style"
+            android:layout_marginLeft="@dimen/pad10"
+            android:text="电子现金" />
+
+        <TextView
+            android:id="@+id/textDate"
+            style="@style/text_nomal_style2"
+            android:layout_marginLeft="@dimen/pad10"
+            android:layout_marginTop="@dimen/pad5"
+            android:text="2017-02-12" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textValue"
+        style="@style/text_nomal_style"
+        android:text="￥588"
+        android:textColor="@color/red" />
+</LinearLayout>

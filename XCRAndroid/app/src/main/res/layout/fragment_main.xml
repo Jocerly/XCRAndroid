@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <com.yatang.xc.xcr.views.HomeJCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llRevenueNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/pad100"
+                    android:background="@drawable/red_gradient"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textRevenueNum"
+                        style="@style/text_large_style"
+                        android:text="--"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/text_nomal_style"
+                        android:layout_below="@+id/textRevenueNum"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/pad10"
+                        android:text="今日总营收（元）"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <org.jocerly.jcannotation.widget.recyclevew.MyScrollview
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <com.yatang.xc.xcr.views.CustomViewPager
+                            android:id="@+id/mainView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="5dp"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+                    </FrameLayout>
+
+                    <!--轮播图-->
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/adBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pad6"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants">
+
+                        <org.jocerly.jcannotation.widget.listView.CustomerListView
+                            android:id="@+id/recyclerAD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pad6"
+                            android:divider="@color/base_bg"
+                            android:dividerHeight="@dimen/pad6" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </org.jocerly.jcannotation.widget.recyclevew.MyScrollview>
+        </LinearLayout>
+    </com.yatang.xc.xcr.views.HomeJCSwipeRefreshLayout>
+</LinearLayout>

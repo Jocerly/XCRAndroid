@@ -1,0 +1,14 @@
+{
+  "name": "com-yatang-plugin-ytnetwork",
+  "version": "1.0.0",
+  "description": "check network status plugin for cordova",
+  "main": "ytnetwork.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ytnetwork"
+  ],
+  "author": "lixiang",
+  "license": "ISC"
+}

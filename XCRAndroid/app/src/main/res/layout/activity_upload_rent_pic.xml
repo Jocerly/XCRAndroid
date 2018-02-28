@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/pad10">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_marginBottom="@dimen/pad10"
+                    android:text="开启电视机广告" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlOpenTvPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad140"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:layout_weight="1"
+                        android:background="@color/base_bg">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/add_bg"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/imageOpenTvPic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/imageOpenTvPicShade"
+                            android:layout_toEndOf="@+id/imageOpenTvPicShade" />
+
+                        <ImageView
+                            android:id="@+id/imageOpenTvPicShade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/textOpenTvPic"
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="点击修改"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_Open_Tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/open_tv" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom" />
+
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="示例图片"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/pad10">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_marginBottom="@dimen/pad10"
+                    android:text="收银机登录收银系统" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlLoginCMPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad140"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:layout_weight="1"
+                        android:background="@color/base_bg">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/add_bg"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/imageLoginCMPic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imageLoginCMPicShade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/textLoginCMPic"
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="点击修改"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_Login_Cm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/login_cm" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom" />
+
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="示例图片"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/pad10">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_marginBottom="@dimen/pad10"
+                    android:text="货架商品陈列样式" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlShelfDisplayPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad140"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:layout_weight="1"
+                        android:background="@color/base_bg">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/add_bg"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/imageShelfDisplayPic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imageShelfDisplayPicShade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textShelfDisplayPic"
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="点击修改"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_Shelf_Display"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/shelf_display" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom" />
+
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="示例图片"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/pad10">
+
+                <TextView
+                    style="@style/text_nomal_style"
+                    android:layout_marginBottom="@dimen/pad10"
+                    android:text="加盟验收单" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAcceptPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/pad140"
+                        android:layout_marginRight="@dimen/pad5"
+                        android:layout_weight="1"
+                        android:background="@color/base_bg">
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/add_bg"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:id="@+id/imageAcceptPic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imageAcceptPicShade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/textAcceptPic"
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="点击修改"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/pad5"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_Accept2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/accept2" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom" />
+
+
+                        <TextView
+                            style="@style/text_nomal_style"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/pad5"
+                            android:text="示例图片"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnUpDate"
+                style="@style/btnCirlceRedStyle"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/pad15"
+                android:text="提交" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

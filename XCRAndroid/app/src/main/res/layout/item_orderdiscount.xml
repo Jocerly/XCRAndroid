@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relayDiscount"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pad35"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/pad15"
+    android:paddingRight="@dimen/pad15">
+
+    <TextView
+        android:id="@+id/textDiscountName"
+        style="@style/text_nomal_style"
+        android:text="优惠金额" />
+
+    <TextView
+        android:id="@+id/textDiscount"
+        style="@style/text_ticket_style"
+        android:layout_alignParentRight="true"
+        android:text="--"
+        android:textColor="@color/red" />
+
+</RelativeLayout>

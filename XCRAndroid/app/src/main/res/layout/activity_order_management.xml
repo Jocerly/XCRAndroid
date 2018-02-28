@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad42"
+                android:layout_marginTop="@dimen/pad15"
+                android:layout_marginBottom="@dimen/pad15"
+                android:layout_marginLeft="@dimen/pad10"
+                android:layout_marginRight="@dimen/pad10"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioWaitingOrder"
+                    style="@style/radio_nomal_style"
+                    android:textSize="@dimen/font2_1"
+                    android:background="@drawable/task_left_bg"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="待接单(0)" />
+
+                <RadioButton
+                    android:id="@+id/radioDeliverOrder"
+                    style="@style/radio_nomal_style"
+                    android:background="@drawable/task_center_bg"
+                    android:textSize="@dimen/font2_1"
+                    android:layout_weight="1"
+                    android:text="待发货(0)" />
+                <RadioButton
+                    android:id="@+id/radioDeliverredOrder"
+                    style="@style/radio_nomal_style"
+                    android:background="@drawable/task_center_bg"
+                    android:textSize="@dimen/font2_1"
+                    android:layout_weight="1"
+                    android:text="已发货(0)" />
+                <RadioButton
+                    android:id="@+id/radioReturn"
+                    style="@style/radio_nomal_style"
+                    android:background="@drawable/task_right_bg"
+                    android:textSize="@dimen/font2_1"
+                    android:layout_weight="1"
+                    android:text="退货中(0)" />
+            </RadioGroup>
+
+            <View style="@style/line_style"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView>
+
+                <!--<View-->
+                <!--style="@style/line_style"-->
+                <!--android:layout_gravity="bottom"></View>-->
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/pad20"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data" />
+            </FrameLayout>
+            <View style="@style/line_style"></View>
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

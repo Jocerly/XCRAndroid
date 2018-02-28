@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad60"
+        android:layout_marginTop="@dimen/pad10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/pad45"
+        android:paddingRight="@dimen/pad45">
+
+        <TextView
+            android:id="@+id/text1"
+            style="@style/text_nomal_style2"
+            android:background="@drawable/step_on"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white" />
+
+        <View
+            style="@style/line_style"
+            android:layout_height="@dimen/pad3"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text2"
+            style="@style/text_nomal_style2"
+            android:background="@drawable/step_no"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/white" />
+
+        <View
+            style="@style/line_style"
+            android:layout_height="@dimen/pad3"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text3"
+            style="@style/text_nomal_style2"
+            android:background="@drawable/step_no"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pad20">
+
+        <TextView
+            android:id="@+id/textStep1"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/pad30"
+            android:text="选择保证金"
+            android:textColor="@color/text_dark" />
+
+        <TextView
+            android:id="@+id/textStep2"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="合同签订" />
+
+        <TextView
+            android:id="@+id/textStep3"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/pad30"
+            android:text="支付保证金" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/llFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

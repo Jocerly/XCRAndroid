@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar" />
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pad42"
+                android:layout_margin="@dimen/pad15"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbFrameType"
+                    style="@style/radio_nomal_style"
+                    android:layout_weight="1"
+                    android:background="@drawable/task_left_bg"
+                    android:checked="true"
+                    android:text="售卖中"
+                    android:textColor="@drawable/text_red_select" />
+
+                <RadioButton
+                    android:id="@+id/rbWaitFrameType"
+                    style="@style/radio_nomal_style"
+                    android:layout_weight="1"
+                    android:background="@drawable/task_right_bg"
+                    android:text="待上架"
+                    android:textColor="@drawable/text_red_select" />
+
+            </RadioGroup>
+
+            <View style="@style/line_style"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_light2">
+
+                <TextView
+                    android:id="@+id/textClassify"
+                    style="@style/text_nomal_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/pad15"
+                    android:layout_marginRight="@dimen/pad15"
+                    android:drawableRight="@drawable/next_bg"
+                    android:gravity="center_vertical"
+                    android:text="商品分类：全部" />
+                <com.yatang.xc.xcr.views.PressTextView
+                    android:id="@+id/btnAll"
+                    style="@style/btnNomalStyle"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/task_finish"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/pad15"
+                    android:layout_marginRight="@dimen/pad15"
+                    android:text="全部上架"
+                    android:textColor="@color/text_dark" />
+
+            </FrameLayout>
+
+            <View style="@style/line_style"></View>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    style="@style/line_style"
+                    android:layout_gravity="bottom"></View>
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/pad20"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_above="@+id/llFrameType" />
+
+    <LinearLayout
+        android:id="@id/llFrameType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad70"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <com.yatang.xc.xcr.views.PressTextView
+            android:id="@+id/textBatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/batch_processing"
+            android:gravity="center"
+            android:text="批量编辑" />
+
+        <RelativeLayout
+            android:id="@+id/rlFrameType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/pad15"
+            android:paddingRight="@dimen/pad15"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textSceleted"
+                style="@style/text_nomal_style"
+                android:layout_centerVertical="true"
+                android:text="已选" />
+
+            <TextView
+                android:id="@+id/textNum"
+                style="@style/text_nomal_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/pad5"
+                android:layout_toRightOf="@+id/textSceleted"
+                android:text="0"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/btnClose"
+                style="@style/btnNomalStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/pad15"
+                android:layout_toLeftOf="@+id/btnFrameType"
+                android:background="@drawable/task_finish"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/text_dark" />
+
+            <com.yatang.xc.xcr.views.PressTextView
+                android:id="@+id/btnFrameType"
+                style="@style/btnNomalStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/task_finish"
+                android:gravity="center"
+                android:text="上架"
+                android:textColor="@color/text_dark" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

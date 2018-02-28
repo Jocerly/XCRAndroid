@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pad71"
+    android:orientation="horizontal"
+    android:padding="@dimen/pad15">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imagePic"-->
+        <!--android:layout_width="@dimen/pad40"-->
+        <!--android:layout_height="@dimen/pad40"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/task_other" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_toRightOf="@id/imagePic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/pad15" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017.11.06"
+            android:layout_marginTop="@dimen/pad5"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/pad11" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textIntegralValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="+1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pad15" />
+</RelativeLayout>

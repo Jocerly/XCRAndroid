@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        style="@style/text_nomal_style"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="公众号关注量" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="@dimen/pad5"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/pad20"
+        android:paddingTop="@dimen/pad20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPublicAttentionToday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="今日关注" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPublicAttentionYesterday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="昨日关注" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPublicAttentionAll"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="总关注量" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_style"></View>
+
+    <TextView
+        style="@style/text_nomal_style"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="注册用户量" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="@dimen/pad5"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/pad20"
+        android:paddingTop="@dimen/pad20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textRegisterToday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="今日注册" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textRegisterYesterday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="昨日注册" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textRegisterAll"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="总注册量" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_style"></View>
+
+    <TextView
+        style="@style/text_nomal_style"
+        android:layout_marginLeft="@dimen/pad15"
+        android:layout_marginTop="@dimen/pad15"
+        android:text="下单用户数" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="@dimen/pad5"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/pad20"
+        android:paddingTop="@dimen/pad20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textOrderToday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="今日下单" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textOrderYesterday"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="昨日下单" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textOrderAll"
+                style="@style/text_medium_style"
+                android:saveEnabled="true"
+                android:text="--" />
+
+            <TextView
+                style="@style/text_nomal_style2"
+                android:layout_marginTop="@dimen/pad10"
+                android:text="总下单用户数" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_style"></View>
+</LinearLayout>

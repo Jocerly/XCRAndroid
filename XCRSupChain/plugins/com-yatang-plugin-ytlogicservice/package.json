@@ -1,0 +1,14 @@
+{
+  "name": "com-yatang-plugin-ytlogicservive",
+  "version": "1.0.0",
+  "description": "获取前端需要的业务参数",
+  "main": "ytlogicService.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "YTLogicService"
+  ],
+  "author": "lixiang",
+  "license": "ISC"
+}

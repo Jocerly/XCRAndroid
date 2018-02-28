@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/pad15">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textGoodsName"
+            style="@style/text_nomal_style"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/textGoodsPrice"
+            android:text="的女警南京南京" />
+
+        <TextView
+            android:id="@+id/textGoodsPrice"
+            style="@style/text_nomal_style"
+            android:layout_marginRight="@dimen/pad5"
+            android:layout_toLeftOf="@+id/textUnitName"
+            android:text="9.5"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textUnitName"
+            style="@style/text_nomal_style"
+            android:layout_alignParentRight="true"
+            android:text="元/盒"
+            android:textColor="@color/text_light" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad5">
+
+        <TextView
+            android:id="@+id/textGoodsStatue"
+            style="@style/text_nomal_style2"
+            android:layout_width="match_parent"
+            android:text="常规商品" />
+
+
+        <TextView
+            android:id="@+id/textGoodsCode"
+            style="@style/text_nomal_style2"
+            android:layout_alignParentRight="true"
+            android:text="元/盒"  />
+    </RelativeLayout>
+
+</LinearLayout>

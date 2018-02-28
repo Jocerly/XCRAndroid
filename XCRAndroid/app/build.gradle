@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'xcr'
+            keyPassword 'yatang888'
+            storeFile file('./jks/xcr.jks')
+            storePassword 'yatang888'
+        }
+        debug {
+            keyAlias 'xcr'
+            keyPassword 'yatang888'
+            storeFile file('./jks/xcr.jks')
+            storePassword 'yatang888'
+        }
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.yatang.xc.xcr"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 13
+        versionName 'v2.5.0'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfigs "zh"
+        multiDexEnabled true
+
+        ndk {
+
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "2bb09b4257284d8a2a5096ca", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField("String", "CLIENT_HOST", "\"https://xcrapp.yatang.com.cn/\"")
+            buildConfigField("String", "OnTag", "\"XCR_Online\"")
+
+            minifyEnabled false // 设置代码进行混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release // 签名配置
+        }
+        debug {
+            buildConfigField("String", "CLIENT_HOST", "\"http://172.30.11.20:30188/xcr-web-app/\"")
+            buildConfigField("String", "OnTag", "\"XCR_Test\"")
+
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent, "XCRAndroid_" + defaultConfig.versionName + ".apk");
+            }
+    }
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':jcannotation')
+    compile files('libs/jcore-android_v1.1.0.jar')
+    compile files('libs/jpush-android_v3.0.1.jar')
+    /*compile 'cn.finalteam.rxgalleryfinal:library:0.0.8'*/
+    compile project(':galleryfinal')
+    compile files('libs/zbardecoder.jar')
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
+    //    compile project(':android')
+    // 解决在library中设置buildConfigField无用
+    releaseCompile project(path: ':android', configuration: 'release')
+    debugCompile project(path: ':android', configuration: 'debug')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/com.baidu.tts_2.3.1.20170808_e39ea89.jar')
+    compile 'com.google.zxing:core:3.3.0'
+//    compile files('libs/libammsdk.jar')
+    compile files('libs/wftsdk5.0.jar')
+    compile 'com.android.support:multidex:1.0.1'
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/text_medium_style"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="@dimen/pad5"
+            android:paddingRight="@dimen/pad5"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/white" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.yatang.xc.xcr.views.PressTextView
+        android:id="@+id/btnLeft"
+        style="@style/text_nomal_style"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableLeft="@drawable/back_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/pad15"
+        android:text="@string/back"
+        android:textColor="@drawable/text_back_color" />
+
+
+    <com.yatang.xc.xcr.views.PressTextView
+        android:id="@+id/btnRight"
+        style="@style/text_nomal_style"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="@dimen/pad15"
+        android:textColor="@drawable/text_back_color" />
+</RelativeLayout>

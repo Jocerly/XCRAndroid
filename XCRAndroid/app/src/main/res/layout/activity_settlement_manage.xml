@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad42"
+        android:layout_margin="@dimen/pad15"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbSettlement"
+            style="@style/radio_nomal_style"
+            android:layout_weight="1"
+            android:background="@drawable/task_left_bg"
+            android:checked="true"
+            android:text="订单结算"
+            android:textColor="@drawable/text_red_select" />
+
+        <RadioButton
+            android:id="@+id/rbCouponList"
+            style="@style/radio_nomal_style"
+            android:layout_weight="1"
+            android:background="@drawable/task_right_bg"
+            android:text="优惠券结算"
+            android:textColor="@drawable/text_red_select" />
+
+    </RadioGroup>
+
+    <org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_all"
+                android:visibility="gone"></include>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <org.jocerly.jcannotation.widget.recyclevew.LoadMoreRecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textNoData"
+                    style="@style/text_nomal_style2"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/pad20"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/no_data"
+                    android:text="@string/no_data" />
+            </FrameLayout>
+            <View style="@style/line_style"/>
+        </LinearLayout>
+    </org.jocerly.jcannotation.widget.swiperefreshlayout.JCSwipeRefreshLayout>
+</LinearLayout>

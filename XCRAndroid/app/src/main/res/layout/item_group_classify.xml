@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View style="@style/line_style"></View>
+
+    <TextView
+        android:id="@+id/textClassifyName"
+        style="@style/text_nomal_style"
+        android:layout_width="match_parent"
+        android:background="@color/left_menu_press"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/pad10"
+        android:text="分类一级">
+
+    </TextView>
+
+    <View style="@style/line_style"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/pad10"
+        android:paddingTop="@dimen/pad15">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View style="@style/line_style"></View>
+</LinearLayout>

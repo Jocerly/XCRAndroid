@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "com-yatang-plugin-ytlogicservice": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "com-yatang-plugin-ytnavigation": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "com-yatang-plugin-ytnetwork": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "com-yatang-plugin-ytnotification": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "com-yatang-plugin-ytpay": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        },
+        "x5webview-cordova-plugin": {
+            "PACKAGE_NAME": "com.yatang.xc.supchain"
+        }
+    },
+    "dependent_plugins": {}
+}

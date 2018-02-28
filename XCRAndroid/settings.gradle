@@ -1,0 +1,8 @@
+include ':app', ':jcannotation', ':galleryfinal'
+
+include ':android'
+include ':CordovaLib'
+
+project(':android').projectDir = new File('../XCRSupChain\\platforms\\android')
+project(':CordovaLib').projectDir = new File('../XCRSupChain\\platforms\\android\\CordovaLib')
+

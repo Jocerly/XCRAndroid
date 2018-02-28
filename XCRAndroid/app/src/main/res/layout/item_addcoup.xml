@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/coupon"
+    android:gravity="center_vertical"
+    android:layout_marginTop="@dimen/pad15"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/CouponBalance"
+        android:textSize="@dimen/font4_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="￥20"
+        android:textColor="@color/white" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/pad10"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/UseCondition"
+                style="@style/text_nomal_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="满100元可用"
+                android:layout_gravity="left"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Duration"
+                style="@style/text_small_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/pad5"
+                android:text="领券后3天内有效"
+                android:layout_gravity="left"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad15"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/deletecoupon" />
+    </RelativeLayout>
+
+
+</LinearLayout>
